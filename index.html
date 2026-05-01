@@ -17,7 +17,7 @@
         }
         .scrolling-wrapper {
             display: flex;
-            width: calc(350px * 16); /* 8张图 * 2 (克隆一份实现无缝) */
+            width: calc(350px * 16); 
             animation: scroll 30s linear infinite;
         }
         .scrolling-wrapper:hover { animation-play-state: paused; }
@@ -43,16 +43,20 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - 背景已更换为 factory-6.jpg -->
     <section class="h-screen relative flex items-center justify-center overflow-hidden">
-        <img src="images/product-01.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Masterpiece">
+        <!-- 核心修改：使用展厅图作为主视觉背景 -->
+        <img src="images/factory-6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Exhibition Hall">
+        <!-- 遮罩层，确保文字识别度 -->
+        <div class="absolute inset-0 bg-black/30"></div>
+        
         <div class="relative z-10 text-center px-6">
             <h1 class="serif text-6xl md:text-9xl italic mb-6">Silent Elegance.</h1>
             <p class="tracking-[0.4em] uppercase text-[10px] text-gray-400">World-Class Hyper-Realistic Anatomy</p>
         </div>
     </section>
 
-    <!-- 1. 工厂细节：自动平滑循环 (Factory Automation) -->
+    <!-- 1. 工厂细节：自动平滑循环 -->
     <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden">
         <div class="px-10 md:px-24 mb-12">
             <h2 class="serif text-4xl italic">Industrial Mastery</h2>
@@ -61,7 +65,6 @@
         
         <div class="relative flex overflow-hidden border-y border-white/5 py-10">
             <div class="scrolling-wrapper">
-                <!-- 依次放入 factory-1 到 factory-8 -->
                 <img src="images/factory-1.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
                 <img src="images/factory-2.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
                 <img src="images/factory-3.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
@@ -70,7 +73,7 @@
                 <img src="images/factory-6.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
                 <img src="images/factory-7.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
                 <img src="images/factory-8.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <!-- 克隆一份实现无缝循环 -->
+                <!-- 克隆无缝循环 -->
                 <img src="images/factory-1.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
                 <img src="images/factory-2.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
                 <img src="images/factory-3.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
@@ -83,16 +86,13 @@
         </div>
     </section>
 
-    <!-- 2. 产品展示：全量展示 (All 31 Products) -->
+    <!-- 2. 产品展示：全量展示 -->
     <section id="collection" class="py-24 px-10 md:px-24 bg-white text-black">
         <div class="mb-20 flex flex-col md:flex-row justify-between items-end">
             <h2 class="serif text-6xl italic">The Collection</h2>
             <p class="text-[10px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0">31 Hand-Crafted Masterpieces Available</p>
         </div>
-
-        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12">
-            <!-- JavaScript 将在此处填入 31 张图片 -->
-        </div>
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12"></div>
     </section>
 
     <!-- Order Modal -->
@@ -101,7 +101,6 @@
             <button onclick="document.getElementById('order-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-white transition">✕</button>
             <h2 class="serif text-3xl mb-1 italic">Shipping Details</h2>
             <p id="order-item" class="text-[10px] tracking-widest text-gray-500 uppercase mb-8"></p>
-            
             <form action="YOUR_FORMSPREE_URL" method="POST" class="space-y-4">
                 <input type="text" name="name" placeholder="Full Name" required class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white text-white">
                 <textarea name="address" placeholder="Shipping Address & Contact Number" required rows="3" class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white text-white"></textarea>
@@ -127,7 +126,6 @@
     </footer>
 
     <script>
-        // 自动注入 31 个产品
         const grid = document.getElementById('product-grid');
         for (let i = 1; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
@@ -150,7 +148,6 @@
                 </div>
             `;
         }
-
         function openOrder(name, price) {
             document.getElementById('order-modal').classList.remove('hidden');
             document.getElementById('order-item').innerText = "Model: " + name + " | " + price;
