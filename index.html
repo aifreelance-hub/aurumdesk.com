@@ -3,155 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE DOLL | Global Premium Bespoke Figures</title>
+    <title>LUXE DOLL | Global Premium Figures</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
+        
+        /* 工厂图片自动滚动动画 */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .scrolling-wrapper {
+            display: flex;
+            width: calc(350px * 16); /* 8张图 * 2 (克隆一份实现无缝) */
+            animation: scroll 30s linear infinite;
+        }
+        .scrolling-wrapper:hover { animation-play-state: paused; }
     </style>
 </head>
 <body>
 
-    <!-- Age Gate (Same as before) -->
-    <div id="age-gate" class="fixed inset-0 z-[300] flex items-center justify-center bg-black">
-        <div class="text-center px-6">
+    <!-- Age Verification -->
+    <div id="age-gate" class="fixed inset-0 z-[500] flex items-center justify-center bg-black">
+        <div class="text-center">
             <h2 class="serif text-4xl italic mb-6">Age Verification</h2>
-            <button onclick="document.getElementById('age-gate').style.display='none'" class="border border-white px-10 py-3 hover:bg-white hover:text-black transition uppercase text-xs tracking-widest">I am 18 or older</button>
+            <button onclick="document.getElementById('age-gate').style.display='none'" class="border border-white px-12 py-3 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-widest">Enter Site</button>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 flex justify-between items-center px-10 py-8 bg-black/50 backdrop-blur-md">
+    <nav class="fixed w-full z-50 flex justify-between items-center px-10 py-8 bg-black/60 backdrop-blur-md">
         <div class="text-2xl font-bold tracking-tighter serif uppercase">Luxe Doll</div>
-        <div class="hidden md:flex space-x-12 text-[10px] tracking-[0.2em] uppercase">
+        <div class="flex space-x-8 text-[9px] tracking-[0.2em] uppercase font-semibold">
             <a href="#factory" class="hover:text-gray-400">Craftsmanship</a>
-            <a href="#products" class="hover:text-gray-400">Collections</a>
+            <a href="#collection" class="hover:text-gray-400">The Collection</a>
             <a href="#track" class="hover:text-gray-400">Tracking</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="h-[80vh] relative flex items-center justify-center overflow-hidden">
-        <img src="images/product-01.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Hero">
-        <div class="relative z-10 text-center">
-            <h1 class="serif text-6xl md:text-8xl italic mb-4">Unrivaled Realism.</h1>
-            <p class="tracking-[0.3em] uppercase text-xs text-gray-400">Bespoke Figures for Discerning Collectors</p>
+    <section class="h-screen relative flex items-center justify-center overflow-hidden">
+        <img src="images/product-01.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Masterpiece">
+        <div class="relative z-10 text-center px-6">
+            <h1 class="serif text-6xl md:text-9xl italic mb-6">Silent Elegance.</h1>
+            <p class="tracking-[0.4em] uppercase text-[10px] text-gray-400">World-Class Hyper-Realistic Anatomy</p>
         </div>
     </section>
 
-    <!-- 1. Factory Details Section (Using factory-1.jpg to factory-8.jpg) -->
-    <section id="factory" class="py-24 px-10 md:px-24 bg-zinc-900/50">
-        <div class="mb-16">
-            <h2 class="serif text-4xl italic">The Art of Manufacturing</h2>
-            <p class="text-gray-500 text-[10px] tracking-widest uppercase mt-2">Precision Engineering & Medical Grade Silicone</p>
+    <!-- 1. 工厂细节：自动平滑循环 (Factory Automation) -->
+    <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden">
+        <div class="px-10 md:px-24 mb-12">
+            <h2 class="serif text-4xl italic">Industrial Mastery</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mt-2">ISO-Certified Manufacturing Process</p>
         </div>
         
-        <!-- Horizontal Scroll for Factory Images -->
-        <div class="flex space-x-6 overflow-x-auto no-scrollbar pb-10">
-            <!-- Loop through your factory images -->
-            <div class="flex-none w-[350px] group">
-                <img src="images/factory-1.jpg" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition duration-700">
-                <p class="mt-4 text-[10px] tracking-widest text-gray-500 uppercase font-bold">01 / Titanium Skeleton</p>
+        <div class="relative flex overflow-hidden border-y border-white/5 py-10">
+            <div class="scrolling-wrapper">
+                <!-- 依次放入 factory-1 到 factory-8 -->
+                <img src="images/factory-1.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-2.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-3.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-4.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-5.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-6.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-7.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-8.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <!-- 克隆一份实现无缝循环 -->
+                <img src="images/factory-1.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-2.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-3.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-4.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-5.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-6.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-7.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-8.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
             </div>
-            <div class="flex-none w-[350px] group">
-                <img src="images/factory-2.jpg" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition duration-700">
-                <p class="mt-4 text-[10px] tracking-widest text-gray-500 uppercase font-bold">02 / Silicone Casting</p>
-            </div>
-            <div class="flex-none w-[350px] group">
-                <img src="images/factory-3.jpg" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition duration-700">
-                <p class="mt-4 text-[10px] tracking-widest text-gray-500 uppercase font-bold">03 / Hand Painting</p>
-            </div>
-            <!-- Add factory-4 to factory-8 similarly -->
         </div>
     </section>
 
-    <!-- 2. Product Grid Section (Using product-01.jpg to product-31.jpg) -->
-    <section id="products" class="py-24 px-10 md:px-24 bg-white text-black">
-        <div class="mb-16 flex justify-between items-end">
-            <h2 class="serif text-5xl italic text-black">The Masterpieces</h2>
-            <p class="text-[10px] tracking-widest uppercase text-gray-400">Worldwide Discreet Shipping</p>
+    <!-- 2. 产品展示：全量展示 (All 31 Products) -->
+    <section id="collection" class="py-24 px-10 md:px-24 bg-white text-black">
+        <div class="mb-20 flex flex-col md:flex-row justify-between items-end">
+            <h2 class="serif text-6xl italic">The Collection</h2>
+            <p class="text-[10px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0">31 Hand-Crafted Masterpieces Available</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-8">
-            
-            <!-- Product Item 1 (Example) -->
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
-                    <img src="images/product-02.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="serif text-xl italic font-bold">The Ethereal Series</h3>
-                        <p class="text-[9px] tracking-widest uppercase text-gray-400">Platinum Grade Silicone</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="serif text-xl font-bold mb-3">$2,450</p>
-                        <button onclick="openOrder('Ethereal Series', '$2,450')" class="bg-black text-white px-6 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-zinc-800 transition">Purchase</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product Item 2 (Example) -->
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
-                    <img src="images/product-03.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="serif text-xl italic font-bold">Standard Model B</h3>
-                        <p class="text-[9px] tracking-widest uppercase text-gray-400">High-End TPE Material</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="serif text-xl font-bold mb-3">$1,800</p>
-                        <button onclick="openOrder('Standard Model B', '$1,800')" class="bg-black text-white px-6 py-2 text-[10px] font-bold tracking-widest uppercase hover:bg-zinc-800 transition">Purchase</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 你可以按照上面的结构，继续复制添加更多产品，只需要更改 images/product-xx.jpg -->
-
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12">
+            <!-- JavaScript 将在此处填入 31 张图片 -->
         </div>
     </section>
 
-    <!-- Order Modal (Collects Shipping Address) -->
-    <div id="order-modal" class="fixed inset-0 z-[500] hidden bg-black/95 flex items-center justify-center p-6 backdrop-blur-xl">
+    <!-- Order Modal -->
+    <div id="order-modal" class="fixed inset-0 z-[600] hidden bg-black/95 flex items-center justify-center p-6 backdrop-blur-xl">
         <div class="w-full max-w-lg bg-zinc-900 p-10 border border-white/10 relative">
-            <button onclick="document.getElementById('order-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500">✕</button>
-            <h2 class="serif text-3xl mb-1 italic">Shipping Information</h2>
+            <button onclick="document.getElementById('order-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-white transition">✕</button>
+            <h2 class="serif text-3xl mb-1 italic">Shipping Details</h2>
             <p id="order-item" class="text-[10px] tracking-widest text-gray-500 uppercase mb-8"></p>
             
-            <form action="YOUR_FORMSPREE_URL_HERE" method="POST" class="space-y-4">
-                <input type="hidden" name="_subject" id="form-subject">
-                <input type="text" name="name" placeholder="Full Name" required class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white">
-                <input type="email" name="email" placeholder="Email Address" required class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white">
-                <textarea name="address" placeholder="Complete Shipping Address (Street, City, State, Country, ZIP)" required rows="3" class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white"></textarea>
-                <div class="pt-4">
-                    <p class="text-[9px] text-gray-600 italic mb-4">* Discreet shipping guaranteed. No sensitive keywords on the package.</p>
-                    <button type="submit" class="w-full bg-white text-black py-4 font-bold tracking-[0.2em] uppercase text-xs">Confirm Order & Proceed to Payment</button>
-                </div>
+            <form action="YOUR_FORMSPREE_URL" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Full Name" required class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white text-white">
+                <textarea name="address" placeholder="Shipping Address & Contact Number" required rows="3" class="w-full bg-black border border-white/10 p-4 text-sm outline-none focus:border-white text-white"></textarea>
+                <button type="submit" class="w-full bg-white text-black py-4 font-bold tracking-[0.2em] uppercase text-xs hover:bg-gray-200 transition">Confirm Order</button>
             </form>
         </div>
     </div>
 
-    <!-- Logistics Tracking Section -->
+    <!-- Tracking -->
     <section id="track" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
         <div class="max-w-xl">
-            <h2 class="serif text-4xl mb-4 italic">Track Your Order</h2>
-            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Enter your discreet tracking ID</p>
-            <div class="flex space-x-2">
-                <input type="text" placeholder="Tracking Number" class="flex-1 bg-zinc-900 border border-white/10 p-4 text-sm outline-none focus:border-white">
+            <h2 class="serif text-4xl mb-4 italic">Global Tracking</h2>
+            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Enter your secure tracking ID</p>
+            <div class="flex">
+                <input type="text" placeholder="LX-XXXX-XXXX" class="flex-1 bg-zinc-900 border border-white/10 p-4 text-sm outline-none focus:border-white">
                 <button class="bg-white text-black px-8 py-4 font-bold tracking-widest uppercase text-[10px]">Track</button>
             </div>
         </div>
     </section>
 
+    <footer class="py-12 text-center border-t border-white/5 text-[9px] text-gray-600 tracking-[0.3em] uppercase">
+        &copy; 2026 LUXE DOLL INTERNATIONAL. DISCREET & SECURE.
+    </footer>
+
     <script>
+        // 自动注入 31 个产品
+        const grid = document.getElementById('product-grid');
+        for (let i = 1; i <= 31; i++) {
+            let num = i < 10 ? '0' + i : i;
+            let price = 1800 + (i * 25); 
+            grid.innerHTML += `
+                <div class="group">
+                    <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
+                        <img src="images/product-${num}.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="serif text-xl italic font-bold">Luxe Edition ${num}</h3>
+                            <p class="text-[9px] tracking-widest uppercase text-gray-400">High-End Customization</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="serif text-xl font-bold mb-3">$${price}</p>
+                            <button onclick="openOrder('Luxe Edition ${num}', '$${price}')" class="bg-black text-white px-5 py-2 text-[9px] font-bold tracking-widest uppercase hover:bg-zinc-800 transition">Order</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         function openOrder(name, price) {
             document.getElementById('order-modal').classList.remove('hidden');
-            document.getElementById('order-item').innerText = "Selected: " + name + " - " + price;
-            document.getElementById('form-subject').value = "New Order: " + name;
+            document.getElementById('order-item').innerText = "Model: " + name + " | " + price;
         }
     </script>
 </body>
