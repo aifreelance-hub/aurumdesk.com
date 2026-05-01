@@ -43,13 +43,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section - 背景已更换为 factory-6.jpg -->
+    <!-- Hero Section -->
     <section class="h-screen relative flex items-center justify-center overflow-hidden">
-        <!-- 核心修改：使用展厅图作为主视觉背景 -->
         <img src="images/factory-6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Exhibition Hall">
-        <!-- 遮罩层，确保文字识别度 -->
         <div class="absolute inset-0 bg-black/30"></div>
-        
         <div class="relative z-10 text-center px-6">
             <h1 class="serif text-6xl md:text-9xl italic mb-6">Silent Elegance.</h1>
             <p class="tracking-[0.4em] uppercase text-[10px] text-gray-400">World-Class Hyper-Realistic Anatomy</p>
@@ -86,13 +83,88 @@
         </div>
     </section>
 
-    <!-- 2. 产品展示：全量展示 -->
+    <!-- 新增：技术规格版块 -->
+    <section class="py-24 bg-black border-b border-white/5">
+        <div class="px-10 md:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="border-l border-white/10 pl-6">
+                    <h4 class="serif text-2xl italic mb-4">Medical Grade</h4>
+                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
+                        Using 100% safety liquid silicone, FDA & REACH certified. Odorless, skin-friendly, and superior tear resistance.
+                    </p>
+                </div>
+                <div class="border-l border-white/10 pl-6">
+                    <h4 class="serif text-2xl italic mb-4">EVO-Skeleton</h4>
+                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
+                        Proprietary EVO metal skeleton with 64 points of articulation. Simulates human bone structure and weight distribution.
+                    </p>
+                </div>
+                <div class="border-l border-white/10 pl-6">
+                    <h4 class="serif text-2xl italic mb-4">Hyper-Realism</h4>
+                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
+                        Individual hair implantation and nano-pore replication. Every vein and skin texture is hand-refined by master sculptors.
+                    </p>
+                </div>
+                <div class="border-l border-white/10 pl-6">
+                    <h4 class="serif text-2xl italic mb-4">Global Privacy</h4>
+                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
+                        Reinforced discreet wooden crates with no external branding. Secure DHL/FedEx logistics with real-time tracking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 产品展示 -->
     <section id="collection" class="py-24 px-10 md:px-24 bg-white text-black">
         <div class="mb-20 flex flex-col md:flex-row justify-between items-end">
             <h2 class="serif text-6xl italic">The Collection</h2>
             <p class="text-[10px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0">31 Hand-Crafted Masterpieces Available</p>
         </div>
         <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12"></div>
+    </section>
+
+    <!-- 新增：全球客户评价 -->
+    <section class="py-24 px-10 md:px-24 bg-zinc-900/20">
+        <div class="text-center mb-16">
+            <h2 class="serif text-4xl italic">Client Reflections</h2>
+            <p class="text-[9px] tracking-[0.4em] uppercase text-gray-500 mt-2">Verified Purchases from our Global Community</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white/5 p-8 border border-white/5 hover:border-white/20 transition">
+                <div class="flex mb-4"><span class="text-yellow-600 text-xs">★★★★★</span></div>
+                <p class="text-xs italic leading-relaxed mb-6 text-gray-300">"The texture is beyond anything I expected. It has a warmth and softness that digital photos simply cannot capture. Truly a work of art."</p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center text-[9px]">J.M.</div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest">James M.</p>
+                        <p class="text-[8px] text-gray-500 uppercase">United States</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 p-8 border border-white/5 hover:border-white/20 transition">
+                <div class="flex mb-4"><span class="text-yellow-600 text-xs">★★★★★</span></div>
+                <p class="text-xs italic leading-relaxed mb-6 text-gray-300">"Discreet shipping was my main concern. It arrived in a plain industrial crate with no markings. Very professional service."</p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center text-[9px]">D.K.</div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest">Dietrich K.</p>
+                        <p class="text-[8px] text-gray-500 uppercase">Germany</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 p-8 border border-white/5 hover:border-white/20 transition">
+                <div class="flex mb-4"><span class="text-yellow-600 text-xs">★★★★★</span></div>
+                <p class="text-xs italic leading-relaxed mb-6 text-gray-300">"The customization process was smooth. The team kept me updated on production. The final product is a masterpiece."</p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center text-[9px]">S.T.</div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest">Sato T.</p>
+                        <p class="text-[8px] text-gray-500 uppercase">Japan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Order Modal -->
@@ -130,10 +202,13 @@
         for (let i = 1; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
             let price = 1800 + (i * 25); 
+            // 确保图片路径匹配 images/product-01.jpg 到 images/product-31.jpg
             grid.innerHTML += `
                 <div class="group">
                     <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
-                        <img src="images/product-${num}.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                        <img src="images/product-${num}.jpg" 
+                             onerror="this.src='https://via.placeholder.com/300x400?text=Check+FileName'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
