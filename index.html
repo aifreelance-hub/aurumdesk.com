@@ -21,6 +21,11 @@
             animation: scroll 30s linear infinite;
         }
         .scrolling-wrapper:hover { animation-play-state: paused; }
+
+        /* 隐藏滚动条但保留功能 */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #222; }
     </style>
 </head>
 <body>
@@ -34,9 +39,9 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 flex justify-between items-center px-10 py-8 bg-black/60 backdrop-blur-md">
-        <div class="text-2xl font-bold tracking-tighter serif uppercase">Luxe Doll</div>
-        <div class="flex space-x-8 text-[9px] tracking-[0.2em] uppercase font-semibold">
+    <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-10 py-6 md:py-8 bg-black/60 backdrop-blur-md">
+        <div class="text-xl md:text-2xl font-bold tracking-tighter serif uppercase">Luxe Doll</div>
+        <div class="flex space-x-4 md:space-x-8 text-[8px] md:text-[9px] tracking-[0.2em] uppercase font-semibold">
             <a href="#factory" class="hover:text-gray-400">Craftsmanship</a>
             <a href="#collection" class="hover:text-gray-400">The Collection</a>
             <a href="#track" class="hover:text-gray-400">Tracking</a>
@@ -48,8 +53,8 @@
         <img src="images/factory-6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Exhibition Hall">
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="relative z-10 text-center px-6">
-            <h1 class="serif text-6xl md:text-9xl italic mb-6">Silent Elegance.</h1>
-            <p class="tracking-[0.4em] uppercase text-[10px] text-gray-400">World-Class Hyper-Realistic Anatomy</p>
+            <h1 class="serif text-5xl md:text-9xl italic mb-6">Silent Elegance.</h1>
+            <p class="tracking-[0.4em] uppercase text-[9px] md:text-[10px] text-gray-400">World-Class Hyper-Realistic Anatomy</p>
         </div>
     </section>
 
@@ -62,114 +67,90 @@
         
         <div class="relative flex overflow-hidden border-y border-white/5 py-10">
             <div class="scrolling-wrapper">
-                <img src="images/factory-1.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-2.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-3.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-4.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-5.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-6.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-7.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-8.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <!-- 克隆无缝循环 -->
-                <img src="images/factory-1.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-2.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-3.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-4.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-5.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-6.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-7.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
-                <img src="images/factory-8.jpg" class="w-[350px] h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-1.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-2.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-3.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-4.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-5.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-6.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-7.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-8.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <!-- 无缝克隆 -->
+                <img src="images/factory-1.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-2.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-3.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-4.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-5.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-6.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-7.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
+                <img src="images/factory-8.jpg" class="w-[300px] md:w-[350px] h-[200px] md:h-[250px] object-cover px-2 grayscale hover:grayscale-0 transition">
             </div>
         </div>
     </section>
 
-    <!-- 新增：技术规格版块 -->
-    <section class="py-24 bg-black border-b border-white/5">
+    <!-- 专业技术规格 (已去除定制字眼) -->
+    <section class="py-20 bg-black border-b border-white/5">
         <div class="px-10 md:px-24">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
                 <div class="border-l border-white/10 pl-6">
-                    <h4 class="serif text-2xl italic mb-4">Medical Grade</h4>
-                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
-                        Using 100% safety liquid silicone, FDA & REACH certified. Odorless, skin-friendly, and superior tear resistance.
-                    </p>
+                    <h4 class="serif text-xl italic mb-3">Medical Grade</h4>
+                    <p class="text-[9px] leading-relaxed text-gray-500 uppercase tracking-widest">Premium liquid silicone. FDA & REACH certified. 100% skin-safe & odorless.</p>
                 </div>
                 <div class="border-l border-white/10 pl-6">
-                    <h4 class="serif text-2xl italic mb-4">EVO-Skeleton</h4>
-                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
-                        Proprietary EVO metal skeleton with 64 points of articulation. Simulates human bone structure and weight distribution.
-                    </p>
+                    <h4 class="serif text-xl italic mb-3">EVO-Skeleton</h4>
+                    <p class="text-[9px] leading-relaxed text-gray-500 uppercase tracking-widest">Reinforced alloy structure. 64 joints for hyper-flexible natural posing.</p>
                 </div>
                 <div class="border-l border-white/10 pl-6">
-                    <h4 class="serif text-2xl italic mb-4">Hyper-Realism</h4>
-                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
-                        Individual hair implantation and nano-pore replication. Every vein and skin texture is hand-refined by master sculptors.
-                    </p>
+                    <h4 class="serif text-xl italic mb-3">Hyper-Realism</h4>
+                    <p class="text-[9px] leading-relaxed text-gray-500 uppercase tracking-widest">Hand-applied nano-textures. Authentic human pore and vein replication.</p>
                 </div>
                 <div class="border-l border-white/10 pl-6">
-                    <h4 class="serif text-2xl italic mb-4">Global Privacy</h4>
-                    <p class="text-[10px] leading-relaxed text-gray-500 uppercase tracking-widest">
-                        Reinforced discreet wooden crates with no external branding. Secure DHL/FedEx logistics with real-time tracking.
-                    </p>
+                    <h4 class="serif text-xl italic mb-3">Discreet Delivery</h4>
+                    <p class="text-[9px] leading-relaxed text-gray-500 uppercase tracking-widest">Plain industrial packaging. Global secure shipping with full privacy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. 产品展示 -->
-    <section id="collection" class="py-24 px-10 md:px-24 bg-white text-black">
-        <div class="mb-20 flex flex-col md:flex-row justify-between items-end">
-            <h2 class="serif text-6xl italic">The Collection</h2>
-            <p class="text-[10px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0">31 Hand-Crafted Masterpieces Available</p>
+    <!-- 2. 产品展示：手机端双列 (已更新文案) -->
+    <section id="collection" class="py-24 px-6 md:px-24 bg-white text-black">
+        <div class="mb-16 flex flex-col md:flex-row justify-between items-end">
+            <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
+            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0">31 Ready-to-Ship Limited Editions</p>
         </div>
-        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-12"></div>
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-10 md:gap-y-20 gap-x-4 md:gap-x-12"></div>
     </section>
 
-    <!-- 新增：全球客户评价 -->
+    <!-- 客户评价 -->
     <section class="py-24 px-10 md:px-24 bg-zinc-900/20">
         <div class="text-center mb-16">
-            <h2 class="serif text-4xl italic">Client Reflections</h2>
-            <p class="text-[9px] tracking-[0.4em] uppercase text-gray-500 mt-2">Verified Purchases from our Global Community</p>
+            <h2 class="serif text-3xl italic">Client Reflections</h2>
+            <p class="text-[8px] tracking-[0.4em] uppercase text-gray-500 mt-2">Verified Global Purchases</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white/5 p-8 border border-white/5 hover:border-white/20 transition">
-                <div class="flex mb-4"><span class="text-yellow-600 text-xs">★★★★★</span></div>
-                <p class="text-xs italic leading-relaxed mb-6 text-gray-300">"The texture is beyond anything I expected. It has a warmth and softness that digital photos simply cannot capture. Truly a work of art."</p>
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center text-[9px]">J.M.</div>
-                    <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest">James M.</p>
-                        <p class="text-[8px] text-gray-500 uppercase">United States</p>
-                    </div>
-                </div>
+            <div class="bg-white/5 p-6 border border-white/5">
+                <p class="text-[11px] italic text-gray-300 mb-6 leading-relaxed">"The texture is beyond anything I expected. Incredible warmth and softness. A true masterpiece."</p>
+                <p class="text-[10px] font-bold tracking-widest uppercase">James M. <span class="text-gray-600 ml-2">USA</span></p>
             </div>
-            <div class="bg-white/5 p-8 border border-white/5 hover:border-white/20 transition">
-                <div class="flex mb-4"><span class="text-yellow-600 text-xs">★★★★★</span></div>
-                <p class="text-xs italic leading-relaxed mb-6 text-gray-300">"Discreet shipping was my main concern. It arrived in a plain industrial crate with no markings. Very professional service."</p>
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center text-[9px]">D.K.</div>
-                    <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest">Dietrich K.</p>
-                        <p class="text-[8px] text-gray-500 uppercase">Germany</p>
-                    </div>
-                </div>
+            <div class="bg-white/5 p-6 border border-white/5">
+                <p class="text-[11px] italic text-gray-300 mb-6 leading-relaxed">"The discreet shipping was perfect. Arrived in a plain crate. Extremely professional service."</p>
+                <p class="text-[10px] font-bold tracking-widest uppercase">Dietrich K. <span class="text-gray-600 ml-2">Germany</span></p>
             </div>
-            <div class="bg-white/5 p-8 border border-white/5 hover:border-white/20 transition">
-                <div class="flex mb-4"><span class="text-yellow-600 text-xs">★★★★★</span></div>
-                <p class="text-xs italic leading-relaxed mb-6 text-gray-300">"The customization process was smooth. The team kept me updated on production. The final product is a masterpiece."</p>
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center text-[9px]">S.T.</div>
-                    <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest">Sato T.</p>
-                        <p class="text-[8px] text-gray-500 uppercase">Japan</p>
-                    </div>
-                </div>
+            <div class="bg-white/5 p-6 border border-white/5">
+                <p class="text-[11px] italic text-gray-300 mb-6 leading-relaxed">"Arrived much faster than expected. The detail in the skin texture is remarkably lifelike."</p>
+                <p class="text-[10px] font-bold tracking-widest uppercase">Sato T. <span class="text-gray-600 ml-2">Japan</span></p>
             </div>
         </div>
     </section>
+
+    <!-- 返回顶部按钮 -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 z-[100] bg-black/50 backdrop-blur-lg border border-white/10 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition shadow-xl">
+        ↑
+    </button>
 
     <!-- Order Modal -->
     <div id="order-modal" class="fixed inset-0 z-[600] hidden bg-black/95 flex items-center justify-center p-6 backdrop-blur-xl">
-        <div class="w-full max-w-lg bg-zinc-900 p-10 border border-white/10 relative">
+        <div class="w-full max-w-lg bg-zinc-900 p-10 border border-white/10 relative text-white">
             <button onclick="document.getElementById('order-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-white transition">✕</button>
             <h2 class="serif text-3xl mb-1 italic">Shipping Details</h2>
             <p id="order-item" class="text-[10px] tracking-widest text-gray-500 uppercase mb-8"></p>
@@ -184,11 +165,10 @@
     <!-- Tracking -->
     <section id="track" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
         <div class="max-w-xl">
-            <h2 class="serif text-4xl mb-4 italic">Global Tracking</h2>
-            <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-8">Enter your secure tracking ID</p>
+            <h2 class="serif text-4xl mb-4 italic text-white">Global Tracking</h2>
             <div class="flex">
-                <input type="text" placeholder="LX-XXXX-XXXX" class="flex-1 bg-zinc-900 border border-white/10 p-4 text-sm outline-none focus:border-white">
-                <button class="bg-white text-black px-8 py-4 font-bold tracking-widest uppercase text-[10px]">Track</button>
+                <input type="text" placeholder="LX-XXXX-XXXX" class="flex-1 bg-zinc-900 border border-white/10 p-4 text-sm outline-none focus:border-white text-white">
+                <button class="bg-white text-black px-6 md:px-8 py-4 font-bold tracking-widest uppercase text-[10px]">Track</button>
             </div>
         </div>
     </section>
@@ -202,22 +182,21 @@
         for (let i = 1; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
             let price = 1800 + (i * 25); 
-            // 确保图片路径匹配 images/product-01.jpg 到 images/product-31.jpg
             grid.innerHTML += `
                 <div class="group">
-                    <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
+                    <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-4 md:mb-6">
                         <img src="images/product-${num}.jpg" 
-                             onerror="this.src='https://via.placeholder.com/300x400?text=Check+FileName'"
+                             onerror="this.src='https://via.placeholder.com/300x400?text=Exhibition+Grade'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
                     </div>
-                    <div class="flex justify-between items-start">
+                    <div class="flex flex-col space-y-2">
                         <div>
-                            <h3 class="serif text-xl italic font-bold">Luxe Edition ${num}</h3>
-                            <p class="text-[9px] tracking-widest uppercase text-gray-400">High-End Customization</p>
+                            <h3 class="serif text-xs md:text-xl italic font-bold">Luxe ${num}</h3>
+                            <p class="text-[7px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade</p>
                         </div>
-                        <div class="text-right">
-                            <p class="serif text-xl font-bold mb-3">$${price}</p>
-                            <button onclick="openOrder('Luxe Edition ${num}', '$${price}')" class="bg-black text-white px-5 py-2 text-[9px] font-bold tracking-widest uppercase hover:bg-zinc-800 transition">Order</button>
+                        <div class="flex justify-between items-center">
+                            <p class="serif text-sm md:text-xl font-bold">$${price}</p>
+                            <button onclick="openOrder('Luxe ${num}', '$${price}')" class="bg-black text-white px-3 md:px-5 py-2 text-[7px] md:text-[9px] font-bold tracking-widest uppercase hover:bg-zinc-800 transition">Order</button>
                         </div>
                     </div>
                 </div>
