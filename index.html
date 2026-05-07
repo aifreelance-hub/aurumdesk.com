@@ -131,16 +131,34 @@
     </div>
 
     <script>
-        // 渲染所有按钮的逻辑
         function renderAllButtons() {
             if (!window.paypal) return;
 
-            // 1. 渲染第一个产品 (KJGFNAY5VBR8N)
-            paypal.HostedButtons({
-                hostedButtonId: "KJGFNAY5VBR8N",
+            // 1. 渲染第一个产品 (使用专用 Buy Now 样式)
+            paypal.Buttons({
+                style: { 
+                    layout: 'horizontal', 
+                    color: 'gold', 
+                    shape: 'rect', 
+                    label: 'buynow', // 改为立即购买标签
+                    height: 35 
+                },
+                createOrder: (data, actions) => {
+                    return actions.order.create({
+                        purchase_units: [{
+                            description: "Luxe 01 - Final Sale",
+                            amount: { value: "280.00" }
+                        }]
+                    });
+                },
+                onApprove: (data, actions) => {
+                    return actions.order.capture().then(() => {
+                        window.location.href = "https://aurumdesks.com/thanks.html";
+                    });
+                }
             }).render("#paypal-container-KJGFNAY5VBR8N");
 
-            // 2. 渲染 Luxe 02 - 31
+            // 2. 渲染 Luxe 02 - 31 (保持原有样式不变)
             for (let i = 2; i <= 31; i++) {
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
@@ -163,7 +181,6 @@
             }
         }
 
-        // 页面完全加载后 1 秒再渲染按钮，确保容器 100% 存在
         window.addEventListener('load', () => setTimeout(renderAllButtons, 1000));
     </script>
 </body>
