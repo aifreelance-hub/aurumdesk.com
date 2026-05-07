@@ -6,7 +6,7 @@
     <title>LUXE DOLL | Professional Hyper-Realistic Artistry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAUEoAINS_-q3fOEaBBCBj0tkbRjlctYRcClEOsvbxzhuU_g0CEi9sBQcqfCYK_Me-exptsAZQhNuKuOo&components=hosted-buttons&disable-funding=venmo&currency=USD&locale=en_US"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAUEoAINS_-q3fOEaBBCBj0tkbRjlctYRcClEOsvbxzhuU_g0CEi9sBQcqfCYK_Me-exptsAZQhNuKuOo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
@@ -84,7 +84,7 @@
                     hostedButtonId: "KJGFNAY5VBR8N",
                   }).render("#paypal-container-KJGFNAY5VBR8N")
                 </script>
-            </div>
+                </div>
 
             <script>
                 const collectionGrid = document.currentScript.parentElement;
@@ -160,7 +160,8 @@
                 }).render(`#paypal-container-${num}`);
             }
         }
-        window.addEventListener('load', () => setTimeout(renderOtherButtons, 1500));
+        // 稍作延迟确保页面元素生成完毕
+        window.addEventListener('load', () => setTimeout(renderOtherButtons, 1000));
     </script>
 </body>
 </html>
