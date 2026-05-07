@@ -124,6 +124,7 @@
     <script>
         const grid = document.getElementById('product-grid');
         
+        // 渲染产品网格
         for (let i = 1; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
             let price = (i === 1) ? 280 : (1800 + (i * 25)); 
@@ -149,15 +150,16 @@
             `;
         }
 
+        // 初始化 PayPal 收款
         function initPayPal() {
             if (!window.paypal) return;
 
-            // 修改 2：第 1 个产品精准绑定 HostedButtonId 且仅显示按钮
+            // 第1个产品：使用截图中的 HostedButtonId 渲染专用付款按钮
             paypal.HostedButtons({
                 hostedButtonId: "KJGFNAY5VBR8N",
             }).render("#paypal-container-01");
 
-            // 其余产品逻辑保持不变
+            // 其余产品（Luxe 02 - Luxe 31）：使用通用渲染逻辑
             for (let i = 2; i <= 31; i++) {
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
@@ -180,6 +182,7 @@
             }
         }
 
+        // 页面加载完成后延迟初始化，确保 SDK 加载完毕
         window.onload = () => { setTimeout(initPayPal, 600); };
     </script>
 </body>
