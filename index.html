@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXE DOLL | Professional Hyper-Realistic Artistry</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAUEoAINS_-q3fOEaBBCBj0tkbRjlctYRcClEOsvbxzhuU_g0CEi9sBQcqfCYK_Me-exptsAZQhNuKuOo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
@@ -78,12 +76,14 @@
                 <h3 class="serif text-lg md:text-xl font-bold">Luxe 01</h3>
                 <p class="serif text-lg font-bold mb-4">$280</p>
                 
-                <div id="paypal-container-KJGFNAY5VBR8N"></div>
-                <script>
-                  paypal.HostedButtons({
-                    hostedButtonId: "KJGFNAY5VBR8N",
-                  }).render("#paypal-container-KJGFNAY5VBR8N")
-                </script>
+                <div>
+                  <style>.pp-KJGFNAY5VBR8N{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;cursor:pointer;text-transform:none;}</style>
+                  <form action="https://www.paypal.com/ncp/payment/KJGFNAY5VBR8N" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                    <input class="pp-KJGFNAY5VBR8N" type="submit" value="立即购买" />
+                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+                    <section style="font-size: 0.75rem; font-family: 'Inter', sans-serif;">技术支持提供方： <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;display:inline-block;"/></section>
+                  </form>
+                </div>
                 </div>
 
             <script>
@@ -136,32 +136,5 @@
         <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" class="float-btn w-12 h-12 bg-black/80 border border-white/20 rounded-full flex items-center justify-center text-white text-[9px] font-bold">TERMS</button>
     </div>
 
-    <script>
-        function renderOtherButtons() {
-            if (!window.paypal) return;
-            for (let i = 2; i <= 31; i++) {
-                let num = i < 10 ? '0' + i : i;
-                let price = 1800 + (i * 25);
-                paypal.Buttons({
-                    style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
-                    createOrder: (data, actions) => {
-                        return actions.order.create({
-                            purchase_units: [{
-                                description: `Luxe ${num}`,
-                                amount: { value: price.toString() }
-                            }]
-                        });
-                    },
-                    onApprove: (data, actions) => {
-                        return actions.order.capture().then(() => {
-                            window.location.href = "https://aurumdesks.com/thanks.html";
-                        });
-                    }
-                }).render(`#paypal-container-${num}`);
-            }
-        }
-        // 稍作延迟确保页面元素生成完毕
-        window.addEventListener('load', () => setTimeout(renderOtherButtons, 1000));
-    </script>
 </body>
 </html>
