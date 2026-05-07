@@ -1,353 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE DOLL | Professional Hyper-Realistic Artistry</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- PROFESSIONAL INTRO -->
+<section class="py-24 px-10 md:px-24 bg-zinc-900/40 border-t border-white/5 border-b border-white/5">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .float-btn { transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .float-btn:hover { transform: translateY(-3px); background: white; color: black; }
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #333; }
-    </style>
-</head>
-<body>
-
-    <div id="age-gate" class="fixed inset-0 z-[500] flex items-center justify-center bg-black">
-        <div class="text-center px-6">
-            <h2 class="serif text-4xl italic mb-6">Age Verification</h2>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase mb-8">You must be 18+ to enter this exhibition</p>
-            <button onclick="document.getElementById('age-gate').style.display='none'" class="border border-white px-12 py-3 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-widest">Enter Site</button>
+        <div class="border border-white/10 p-8 bg-black/30">
+            <h3 class="serif text-2xl italic mb-4 text-white">Factory Direct</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+                All products are supplied directly from our manufacturing facilities with no middlemen involved.
+                Every model undergoes strict quality inspection before shipment.
+            </p>
         </div>
+
+        <div class="border border-white/10 p-8 bg-black/30">
+            <h3 class="serif text-2xl italic mb-4 text-white">Discreet Shipping</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+                Orders are packed in plain, unbranded cartons with full privacy protection.
+                No product names or sensitive information appear on the outer packaging.
+            </p>
+        </div>
+
+        <div class="border border-white/10 p-8 bg-black/30">
+            <h3 class="serif text-2xl italic mb-4 text-white">Premium Materials</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+                We use high-grade TPE and silicone materials designed for realistic appearance,
+                durability, and a professional exhibition-level finish.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+<section class="py-24 px-10 md:px-24 bg-black border-b border-white/5">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-16">
+            <h2 class="serif text-5xl italic text-white mb-4">Client Reviews</h2>
+            <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500">
+                Verified International Customers
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="border border-white/10 p-8 bg-zinc-900/20">
+                <div class="text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-300 text-sm leading-relaxed italic">
+                    “Packaging was completely discreet and shipping was much faster than expected.
+                    The quality exceeded my expectations.”
+                </p>
+                <p class="mt-6 text-[10px] tracking-widest uppercase text-gray-500">
+                    — Michael, California
+                </p>
+            </div>
+
+            <div class="border border-white/10 p-8 bg-zinc-900/20">
+                <div class="text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-300 text-sm leading-relaxed italic">
+                    “Very professional customer service and realistic craftsmanship.
+                    Definitely one of the best suppliers I’ve purchased from.”
+                </p>
+                <p class="mt-6 text-[10px] tracking-widest uppercase text-gray-500">
+                    — Daniel, Texas
+                </p>
+            </div>
+
+            <div class="border border-white/10 p-8 bg-zinc-900/20">
+                <div class="text-yellow-400 mb-4">★★★★★</div>
+                <p class="text-gray-300 text-sm leading-relaxed italic">
+                    “The face details and body texture are incredible.
+                    Everything arrived safely with no damage.”
+                </p>
+                <p class="mt-6 text-[10px] tracking-widest uppercase text-gray-500">
+                    — Ryan, Florida
+                </p>
+            </div>
+
+        </div>
+
     </div>
 
-    <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-10 py-6 md:py-8 bg-black/60 backdrop-blur-md border-b border-white/5">
-        <div class="text-xl md:text-2xl font-bold tracking-tighter serif uppercase">Luxe Doll</div>
-        <div class="flex space-x-4 md:space-x-8 text-[8px] md:text-[9px] tracking-[0.2em] uppercase font-semibold">
-            <a href="#factory" class="hover:text-gray-400">Heritage</a>
-            <a href="#collection" class="hover:text-gray-400">Collection</a>
-            <a href="#policy" class="hover:text-gray-400">Policy</a>
-        </div>
-    </nav>
+</section>
 
-    <section class="h-screen relative flex items-center justify-center overflow-hidden">
-        <img src="images/factory-6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Exhibition Hall">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative z-10 text-center px-6">
-            <span class="text-[9px] tracking-[0.5em] uppercase text-gray-400 mb-4 block">Est. 2011 | Premium Assets</span>
-            <h1 class="serif text-5xl md:text-9xl italic mb-6">Silent Elegance.</h1>
-            <p class="tracking-[0.4em] uppercase text-[9px] md:text-[10px] text-gray-300">Los Angeles Warehouse • Medical Grade TPE • Discreet Delivery</p>
-        </div>
-    </section>
+<!-- PRIVACY POLICY -->
+<section class="py-24 px-10 md:px-24 bg-zinc-950 border-b border-white/5">
 
-    <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden border-b border-white/5">
-        <div class="px-10 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="max-w-5xl mx-auto">
+
+        <h2 class="serif text-5xl italic text-white mb-14 text-center">
+            Privacy Policy
+        </h2>
+
+        <div class="space-y-10 text-gray-400 text-sm leading-relaxed">
+
             <div>
-                <h2 class="serif text-4xl md:text-5xl italic mb-8">15 Years of Craftsmanship</h2>
-                <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
-                    <p>Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art <b>Los Angeles logistics facility</b> ensures fast transit within the US.</p>
-                </div>
-            </div>
-            <div class="hidden md:block border border-white/10 p-10 bg-black/40">
-                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-6 italic">Reliability Statement</p>
-                <p class="serif text-xl italic leading-relaxed text-gray-200">"Every asset is quality-tested in our industrial facility before being securely packaged for total privacy."</p>
-            </div>
-        </div>
-    </section>
+                <h3 class="text-white text-lg mb-3 uppercase tracking-widest">
+                    Privacy Protection
+                </h3>
 
-    <section id="collection" class="py-24 px-6 md:px-24 bg-white text-black">
-        <div class="mb-16 flex justify-between items-end border-b border-black/10 pb-10">
-            <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
-            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 italic">31 Masterpieces Available</p>
-        </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12">
-            
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-01.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+01'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 01</h3>
-                <p class="serif text-lg font-bold mb-4">$280</p>
-                <form action="https://www.paypal.com/ncp/payment/KJGFNAY5VBR8N" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
+                <p>
+                    We respect every customer's privacy. All orders are processed confidentially
+                    and shipped in plain packaging without product descriptions or sensitive labels.
+                </p>
             </div>
 
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-02.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+02'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 02</h3>
-                <p class="serif text-lg font-bold mb-4">$380</p>
-                <form action="https://www.paypal.com/ncp/payment/W5HVDH37ZXWQG" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
+            <div>
+                <h3 class="text-white text-lg mb-3 uppercase tracking-widest">
+                    Payment Security
+                </h3>
+
+                <p>
+                    Payments are securely processed through trusted international payment providers.
+                    We do not store any sensitive payment information on our servers.
+                </p>
             </div>
 
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-03.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+03'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 03</h3>
-                <p class="serif text-lg font-bold mb-4">$380</p>
-                <form action="https://www.paypal.com/ncp/payment/NUDJ4WE3YB5PA" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
+            <div>
+                <h3 class="text-white text-lg mb-3 uppercase tracking-widest">
+                    Customer Information
+                </h3>
 
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-04.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+04'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 04</h3>
-                <p class="serif text-lg font-bold mb-4">$475</p>
-                <form action="https://www.paypal.com/ncp/payment/MXEC56LKH35FC" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-05.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+05'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 05</h3>
-                <p class="serif text-lg font-bold mb-4">$380</p>
-                <form action="https://www.paypal.com/ncp/payment/NCDLJKPAADDJA" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-06.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+06'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 06</h3>
-                <p class="serif text-lg font-bold mb-4">$470</p>
-                <form action="https://www.paypal.com/ncp/payment/S9JMDQTY48FMU" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-07.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+07'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 07</h3>
-                <p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/DHGMHDT3QA7W2" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-08.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+08'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 08</h3>
-                <p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/SU8YTQ5YNFYV6" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-09.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+09'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 09</h3>
-                <p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/59NJPNQLCUDYQ" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                    <img src="images/product-10.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+10'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                </div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 10</h3>
-                <p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/VQSE3SVAT7K7S" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                    <input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                </form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-11.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+11'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 11</h3><p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/ZGLS2FE6AE2D4" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-12.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+12'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 12</h3><p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/U2GYENCXA2G7C" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-13.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+13'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 13</h3><p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/R3WHS6T8WHV9Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-14.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+14'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 14</h3><p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/F2F8XJ4A8MXJN" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-15.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+15'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 15</h3><p class="serif text-lg font-bold mb-4">$680</p>
-                <form action="https://www.paypal.com/ncp/payment/NBGYFLK4YYY4C" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-16.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+16'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 16</h3><p class="serif text-lg font-bold mb-4">$720</p>
-                <form action="https://www.paypal.com/ncp/payment/95WZ2YDWGHM7G" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-17.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+17'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 17</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/5HBH3F8ZWDEZG" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-18.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+18'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 18</h3><p class="serif text-lg font-bold mb-4">$1250</p>
-                <form action="https://www.paypal.com/ncp/payment/NCZ75B4M8R45U" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-19.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+19'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 19</h3><p class="serif text-lg font-bold mb-4">$1250</p>
-                <form action="https://www.paypal.com/ncp/payment/DX245Y2PH8RNN" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-20.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+20'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 20</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/Q3M5STGJBEMS8" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-21.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+21'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 21</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/VTGQWFC5BMHMW" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-22.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+22'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 22</h3><p class="serif text-lg font-bold mb-4">$1250</p>
-                <form action="https://www.paypal.com/ncp/payment/JJD2RFUH32RUW" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-23.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+23'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 23</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/4T4CJ4XAR7NCL" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-24.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+24'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 24</h3><p class="serif text-lg font-bold mb-4">$1250</p>
-                <form action="https://www.paypal.com/ncp/payment/H5H8YBHYWJTUQ" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-25.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+25'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 25</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/KX973TXJDRHQ6" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-26.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+26'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 26</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/XH6T3J7ULR9YQ" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-27.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+27'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 27</h3><p class="serif text-lg font-bold mb-4">$1250</p>
-                <form action="https://www.paypal.com/ncp/payment/MCRQGR7SGPB8A" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-28.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+28'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 28</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/C69FDGKK8PW22" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-29.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+29'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 29</h3><p class="serif text-lg font-bold mb-4">$1250</p>
-                <form action="https://www.paypal.com/ncp/payment/FJPFCMAURD37E" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-30.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+30'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 30</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/5QP6UJ4E2HLJS" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
-            </div>
-
-            <div class="group">
-                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6"><img src="images/product-31.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+31'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000"></div>
-                <h3 class="serif text-lg md:text-xl font-bold">Luxe 31</h3><p class="serif text-lg font-bold mb-4">$1290</p>
-                <form action="https://www.paypal.com/ncp/payment/CP8C6PXRZWLBJ" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;"><input style="text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;cursor:pointer;" type="submit" value="Buy Now" /><img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" /></form>
+                <p>
+                    Personal information is used only for order fulfillment, shipping,
+                    and customer support purposes. We never sell or share customer data
+                    with third parties.
+                </p>
             </div>
 
         </div>
-    </section>
 
-    <section id="policy" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="serif text-4xl mb-16 italic text-center text-white underline decoration-white/10 underline-offset-8">Shipping & Terms</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase">Logistics</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 tracking-widest uppercase">
-                        <li>• US Only: We do NOT ship to AK, HI, PR, GU, or AP bases.</li>
-                        <li>• Discreet: All items shipped in unbranded cartons.</li>
-                    </ul>
-                </div>
-                <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase">Refund Policy</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 tracking-widest uppercase">
-                        <li>• Final Sale: Private health products—No returns.</li>
-                        <li>• Claims: Damage claims must be made within 7 days.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 text-center bg-zinc-900/50 text-[9px] text-gray-600 tracking-[0.4em] uppercase">
-        &copy; 2026 LUXE DOLL INTERNATIONAL
-    </footer>
-
-    <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-3">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="float-btn w-12 h-12 bg-black/80 border border-white/20 rounded-full flex items-center justify-center text-white">↑</button>
-        <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" class="float-btn w-12 h-12 bg-black/80 border border-white/20 rounded-full flex items-center justify-center text-white text-[9px] font-bold">TERMS</button>
     </div>
 
-</body>
-</html>
+</section>
+
+<!-- SHIPPING + RETURN POLICY -->
+<section class="py-24 px-10 md:px-24 bg-black">
+
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="serif text-5xl italic text-white mb-16 text-center">
+            Shipping & Return Policy
+        </h2>
+
+        <div class="space-y-14">
+
+            <!-- PRICE NOTICE -->
+            <div class="border border-white/10 p-10 bg-zinc-900/20">
+
+                <h3 class="serif text-3xl italic text-white mb-8">
+                    Price & Delivery Notice
+                </h3>
+
+                <ul class="space-y-5 text-gray-400 text-sm leading-relaxed">
+
+                    <li>
+                        • Additional shipping charges may apply for islands,
+                        remote regions, or special delivery zones.
+                    </li>
+
+                    <li>
+                        • Orders can only be shipped to supported countries and regions.
+                        Addresses outside our supported delivery network cannot be fulfilled.
+                    </li>
+
+                    <li>
+                        • European warehouse returns are NOT accepted.
+                        Please confirm your shipping information carefully before dispatch.
+                    </li>
+
+                    <li>
+                        • US warehouse shipping is limited to the mainland United States only.
+                        We do NOT ship to Alaska (AK), Hawaii (HI), Puerto Rico (PR),
+                        Guam (GU), or Armed Forces Pacific (AP) addresses.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- AFTER SALES -->
+            <div class="border border-white/10 p-10 bg-zinc-900/20">
+
+                <h3 class="serif text-3xl italic text-white mb-8">
+                    After-Sales Policy
+                </h3>
+
+                <ul class="space-y-5 text-gray-400 text-sm leading-relaxed">
+
+                    <li>
+                        • If a package is intercepted during transit,
+                        customers are responsible for interception fees and round-trip shipping costs.
+                    </li>
+
+                    <li>
+                        • Refused deliveries without valid reason require customers
+                        to cover return shipping costs. Refunds are only issued after warehouse inspection.
+                    </li>
+
+                    <li>
+                        • Lost packages or abnormal tracking issues require a full English screenshot
+                        of the order page showing the address, tracking number, and order value.
+                    </li>
+
+                    <li>
+                        • Address changes during shipment may incur additional handling fees
+                        and cannot be guaranteed successful.
+                    </li>
+
+                    <li>
+                        • If tracking shows “Delivered” but the customer claims non-receipt,
+                        compensation is not available without signature service.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- DAMAGE -->
+            <div class="border border-white/10 p-10 bg-zinc-900/20">
+
+                <h3 class="serif text-3xl italic text-white mb-8">
+                    Damaged Items & Product Issues
+                </h3>
+
+                <ul class="space-y-5 text-gray-400 text-sm leading-relaxed">
+
+                    <li>
+                        • If the outer package or product is visibly damaged,
+                        customers should refuse delivery immediately.
+                    </li>
+
+                    <li>
+                        • After signing, customers must provide:
+                        outer box photos, shipping label photos,
+                        and damage photos for claim evaluation.
+                    </li>
+
+                    <li>
+                        • Depending on the damage severity,
+                        partial compensation, replacement, or full refund may be provided.
+                    </li>
+
+                    <li>
+                        • TPE products may experience makeup fading during use.
+                        This is considered normal wear and not a product defect.
+                    </li>
+
+                    <li>
+                        • Overseas warehouse dolls use standard skeleton structures.
+                        Excessive force or unnatural posing may damage the frame.
+                    </li>
+
+                    <li>
+                        • Product quality issues must be reported within 7 days after delivery.
+                        Late claims may not be accepted.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- FINAL SALE -->
+            <div class="border border-white/10 p-10 bg-zinc-900/20">
+
+                <h3 class="serif text-3xl italic text-white mb-8">
+                    Final Sale Policy
+                </h3>
+
+                <ul class="space-y-5 text-gray-400 text-sm leading-relaxed">
+
+                    <li>
+                        • Due to hygiene and privacy regulations,
+                        all intimate wellness products are final sale.
+                    </li>
+
+                    <li>
+                        • No returns or exchanges are accepted without verified quality issues.
+                    </li>
+
+                    <li>
+                        • For confirmed defects, compensation or replacement solutions may be offered.
+                    </li>
+
+                    <li>
+                        • Unauthorized returns may not be accepted or refunded,
+                        especially if the item affects resale condition.
+                    </li>
+
+                    <li>
+                        • Full silicone products are strictly non-returnable and non-exchangeable.
+                        Only compensation or replacement support is available for verified quality defects.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
