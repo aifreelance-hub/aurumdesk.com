@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE DOLL | 15 Years of Industrial Excellence</title>
+    <title>LUXE DOLL | Professional Hyper-Realistic Artistry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=BAAUEoAINS_-q3fOEaBBCBj0tkbRjlctYRcClEOsvbxzhuU_g0CEi9sBQcqfCYK_Me-exptsAZQhNuKuOo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
     <style>
@@ -24,25 +24,26 @@
 
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #222; }
+        ::-webkit-scrollbar-thumb { background: #333; }
         
-        .policy-content { display: none; }
-        .policy-content.active { display: block; }
+        .float-btn { transition: all 0.3s ease; }
+        .float-btn:hover { transform: scale(1.1); background: white; color: black; }
     </style>
 </head>
 <body>
 
     <div id="age-gate" class="fixed inset-0 z-[500] flex items-center justify-center bg-black">
-        <div class="text-center">
+        <div class="text-center px-6">
             <h2 class="serif text-4xl italic mb-6">Age Verification</h2>
+            <p class="text-[10px] tracking-widest text-gray-500 uppercase mb-8">You must be 18+ to enter this exhibition</p>
             <button onclick="document.getElementById('age-gate').style.display='none'" class="border border-white px-12 py-3 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-widest">Enter Site</button>
         </div>
     </div>
 
-    <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-10 py-6 md:py-8 bg-black/60 backdrop-blur-md">
+    <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-10 py-6 md:py-8 bg-black/60 backdrop-blur-md border-b border-white/5">
         <div class="text-xl md:text-2xl font-bold tracking-tighter serif uppercase">Luxe Doll</div>
         <div class="flex space-x-4 md:space-x-8 text-[8px] md:text-[9px] tracking-[0.2em] uppercase font-semibold">
-            <a href="#factory" class="hover:text-gray-400">Our Heritage</a>
+            <a href="#factory" class="hover:text-gray-400">Heritage</a>
             <a href="#collection" class="hover:text-gray-400">Collection</a>
             <a href="#policy" class="hover:text-gray-400">Policy</a>
         </div>
@@ -50,142 +51,158 @@
 
     <section class="h-screen relative flex items-center justify-center overflow-hidden">
         <img src="images/factory-6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Exhibition Hall">
-        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
         <div class="relative z-10 text-center px-6">
+            <span class="text-[9px] tracking-[0.5em] uppercase text-gray-400 mb-4 block">Est. 2011 | Premium Quality</span>
             <h1 class="serif text-5xl md:text-9xl italic mb-6">Silent Elegance.</h1>
-            <p class="tracking-[0.4em] uppercase text-[9px] md:text-[10px] text-gray-400">Los Angeles Warehouse | Discrete Shipping | 100% Privacy</p>
+            <p class="tracking-[0.4em] uppercase text-[9px] md:text-[10px] text-gray-300">Los Angeles Hub • Discrete Global Logistics • Medical Grade TPE</p>
         </div>
     </section>
 
     <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden">
-        <div class="px-10 md:px-24 mb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="px-10 md:px-24 mb-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="serif text-4xl md:text-5xl italic mb-6">Local Presence, Global Standards</h2>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                    Our primary inventory is located in **Los Angeles, CA**, ensuring rapid, domestic transit within the US. Every order is dispatched in plain, unmarked packaging to guarantee your absolute privacy and security.
-                </p>
-                <div class="flex space-x-8">
-                    <div><span class="block text-2xl serif italic">LA</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Local Warehouse</span></div>
-                    <div><span class="block text-2xl serif italic">Discrete</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Plain Packaging</span></div>
-                    <div><span class="block text-2xl serif italic">Verified</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Secure Assets</span></div>
+                <h2 class="serif text-4xl md:text-5xl italic mb-8">15 Years of Industrial Excellence</h2>
+                <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
+                    <p>
+                        Since 2011, Luxe Doll has pioneered the intersection of high-fidelity anatomical art and advanced material science. Our <strong>Los Angeles-based logistics hub</strong> ensures that North American clients receive priority dispatching with unmatched discretion.
+                    </p>
+                    <p>
+                        Every masterpiece is crafted using proprietary medical-grade TPE and liquid silicone layering, achieving a skin texture that is indistinguishable from reality. With over 50,000 successful deliveries worldwide, we define the industry standard for professional-grade collectibles.
+                    </p>
+                </div>
+                <div class="flex space-x-8 mt-10">
+                    <div><span class="block text-2xl serif italic">50K+</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Delivered</span></div>
+                    <div><span class="block text-2xl serif italic">LA</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Local Ship</span></div>
+                    <div><span class="block text-2xl serif italic">ISO</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Certified</span></div>
                 </div>
             </div>
-            <div class="hidden md:block border border-white/10 p-8 bg-black/20 text-center">
-                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500 mb-4 italic">Privacy Guarantee</p>
-                <p class="serif text-lg italic">"Your identity remains ours. We ship from local hubs directly to your door without any external branding."</p>
+            <div class="hidden md:block border border-white/10 p-10 bg-black/40 relative">
+                <div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-white/30"></div>
+                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-6 italic">Director's Memo</p>
+                <p class="serif text-xl italic leading-relaxed text-gray-200">
+                    "Our goal is absolute realism. We don't just ship products; we deliver a legacy of craftsmanship, privacy, and local reliability."
+                </p>
+                <div class="mt-8 pt-6 border-t border-white/5 flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-[10px]">LD</div>
+                    <span class="text-[9px] uppercase tracking-widest text-gray-500 font-bold">Authorized Distributor</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="collection" class="py-24 px-6 md:px-24 bg-white text-black">
-        <div class="mb-16 flex flex-col md:flex-row justify-between items-end">
-            <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
-            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0">31 Ready-to-Ship Masterpieces</p>
+        <div class="mb-16 flex flex-col md:flex-row justify-between items-end border-b border-black/10 pb-10">
+            <div>
+                <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
+                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500 mt-2">Los Angeles Warehouse Stock</p>
+            </div>
+            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0 italic">31 Masterpieces Ready to Dispatch</p>
         </div>
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-10 md:gap-y-20 gap-x-4 md:gap-x-12"></div>
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12"></div>
     </section>
 
-    <section id="policy" class="py-24 px-10 md:px-24 bg-zinc-900/50 border-t border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="serif text-4xl mb-12 italic text-center text-white">Shipping & Return Policy</h2>
+    <section id="policy" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="serif text-4xl mb-16 italic text-center text-white underline decoration-white/10 underline-offset-8">Shipping & Terms of Service</h2>
             
-            <div class="space-y-6">
-                <div class="border border-white/10 p-6">
-                    <h3 class="serif text-xl mb-4 text-white">1. Price & Shipping Regions</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed uppercase tracking-wider">
-                        The listed price excludes remote areas/islands. Orders from such locations require additional shipping fees based on actual costs.
-                        <br><br>
-                        <strong>US Restrictions:</strong> Domestic Mainland US only. No shipping to AK (Alaska), HI (Hawaii), PR (Puerto Rico), GU (Guam), or AP (Armed Forces Pacific).
-                        <br><br>
-                        <strong>Europe Notice:</strong> European warehouses do not accept returns. Failed deliveries will be returned to the origin.
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border border-white/5 p-8 bg-zinc-900/20">
+                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2">Logistics & Restrictions</h3>
+                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
+                        <li>• <span class="text-white">Price Policy:</span> Not applicable to islands/remote regions. Extra fees apply.</li>
+                        <li>• <span class="text-white">US Exclusions:</span> We do NOT ship to AK, HI, PR, GU, or AP bases.</li>
+                        <li>• <span class="text-white">Europe:</span> No return service for EU hubs. Undeliverable items return to origin.</li>
+                        <li>• <span class="text-white">Address Change:</span> Interception or changes incur handling fees.</li>
+                    </ul>
                 </div>
 
-                <div class="border border-white/10 p-6">
-                    <h3 class="serif text-xl mb-4 text-white">2. After-Sales & Logistics</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed uppercase tracking-wider">
-                        <strong>Health Notice:</strong> These are private health products. **Strictly NO returns or exchanges for non-quality reasons.** <br><br>
-                        <strong>Interception/Refusal:</strong> If an order is intercepted in transit or refused without cause, the customer is responsible for original and return shipping costs.
-                        <br><br>
-                        <strong>Damaged Goods:</strong> Please inspect upon delivery. If the outer box or product is damaged, refuse the package immediately. For signed packages, provide photos of the box, label, and damage within 7 days for compensation or replacement.
-                    </p>
-                </div>
-
-                <div class="border border-white/10 p-6">
-                    <h3 class="serif text-xl mb-4 text-white">3. Product Care (TPE/Silicone)</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed uppercase tracking-wider">
-                        <strong>TPE Models:</strong> Makeup is hand-painted and may fade with use; this is not a quality issue. 
-                        <strong>Full Silicone:</strong> No returns or exchanges under any circumstances.
-                        <strong>Skeleton:</strong> Standard skeletons have human-limit flexibility. Do not force joints beyond natural angles.
-                    </p>
+                <div class="border border-white/5 p-8 bg-zinc-900/20">
+                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2">Returns & Refunds</h3>
+                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
+                        <li>• <span class="text-white">Private Goods:</span> For health/sanitary reasons, <strong class="text-white">NO returns or exchanges.</strong></li>
+                        <li>• <span class="text-white">Damage:</span> Inspect box upon arrival. Refuse if damaged. Claim within 7 days with photos of label & product.</li>
+                        <li>• <span class="text-white">Material:</span> TPE makeup fading or skeleton limits are not quality issues.</li>
+                        <li>• <span class="text-white">Silicone:</span> No returns/exchanges under any circumstances.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center border-t border-white/5 text-[9px] text-gray-600 tracking-[0.3em] uppercase">
-        &copy; 2026 LUXE DOLL INTERNATIONAL | aurumdesks.com
+    <footer class="py-20 text-center bg-zinc-900/50 text-[9px] text-gray-600 tracking-[0.4em] uppercase">
+        &copy; 2026 LUXE DOLL INTERNATIONAL. 15 Years of Professional Excellence.
     </footer>
+
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-3">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="To Top" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white">
+            ↑
+        </button>
+        <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" title="Policy" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-white text-[10px]">
+            LAW
+        </button>
+    </div>
 
     <script>
         const grid = document.getElementById('product-grid');
         
+        // 渲染 31 个产品
         for (let i = 1; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
-            
-            // 价格逻辑：Luxe 01 为 $280，其余按公式计算（或你可以手动指定）
-            let price;
-            if (i === 1) {
-                price = 280;
-            } else {
-                price = 1800 + (i * 25); 
-            }
+            let price = (i === 1) ? 280 : (1800 + (i * 25)); 
             
             grid.innerHTML += `
                 <div class="group">
-                    <div class="aspect-[3/4] overflow-hidden bg-gray-100 mb-4 md:mb-6">
+                    <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
                         <img src="images/product-${num}.jpg" 
-                             onerror="this.src='https://via.placeholder.com/300x400?text=Exhibition+Grade'"
+                             onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+Exhibition'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
                     </div>
-                    <div class="flex flex-col space-y-2">
+                    <div class="flex flex-col space-y-4">
                         <div>
-                            <h3 class="serif text-xs md:text-xl italic font-bold">Luxe ${num}</h3>
-                            <p class="text-[7px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade</p>
+                            <h3 class="serif text-lg md:text-xl italic font-bold">Luxe ${num}</h3>
+                            <p class="text-[8px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade • LA Stock</p>
                         </div>
-                        <div class="flex flex-col space-y-3">
-                            <p class="serif text-sm md:text-xl font-bold">$${price}</p>
-                            <div id="paypal-btn-container-${num}" class="min-h-[35px]"></div>
+                        <div class="pt-2">
+                            <p class="serif text-lg md:text-xl font-bold mb-4">$${price}</p>
+                            <div id="paypal-btn-container-${num}" class="paypal-container min-h-[35px]"></div>
                         </div>
                     </div>
                 </div>
             `;
-
-            setTimeout(() => {
-                initPaypalButton(num, price);
-            }, 100);
         }
 
-        function initPaypalButton(id, amount) {
-            if (window.paypal) {
+        // 初始化所有 PayPal 按钮
+        function initAllButtons() {
+            if (!window.paypal) return;
+            
+            for (let i = 1; i <= 31; i++) {
+                let num = i < 10 ? '0' + i : i;
+                let price = (i === 1) ? 280 : (1800 + (i * 25)); 
+                
                 paypal.Buttons({
                     style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
-                    createOrder: function(data, actions) {
+                    createOrder: (data, actions) => {
                         return actions.order.create({
                             purchase_units: [{
-                                description: "Luxe Doll Model " + id + " (Private Health Product - No Return)",
-                                amount: { value: amount.toString() }
+                                description: `Luxe Doll Model ${num} - Final Sale (No Return)`,
+                                amount: { value: price.toString() }
                             }]
                         });
                     },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
+                    onApprove: (data, actions) => {
+                        return actions.order.capture().then(() => {
                             window.location.href = "https://aurumdesks.com/thanks.html";
                         });
                     }
-                }).render('#paypal-btn-container-' + id);
+                }).render(`#paypal-btn-container-${num}`);
             }
         }
+
+        // 脚本加载后延迟执行，确保容器已生成
+        window.addEventListener('load', () => {
+            setTimeout(initAllButtons, 500);
+        });
     </script>
 </body>
 </html>
