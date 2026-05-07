@@ -12,10 +12,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
-        
         .float-btn { transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .float-btn:hover { transform: translateY(-3px); background: white; color: black; }
-        
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #333; }
@@ -50,90 +48,48 @@
         </div>
     </section>
 
-    <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden">
-        <div class="px-10 md:px-24 mb-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="serif text-4xl md:text-5xl italic mb-8">15 Years of Craftsmanship</h2>
-                <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
-                    <p>
-                        Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art **Los Angeles logistics facility** ensures fast, domestic transit within the US, bypassing the delays of international shipping.
-                    </p>
-                    <p>
-                        We utilize high-purity TPE and medical-grade silicone to create a sensory experience that mirrors reality. With over 50,000 successful global deliveries, our expertise ensures your privacy and product quality are never compromised.
-                    </p>
-                </div>
-                <div class="flex space-x-8 mt-10">
-                    <div><span class="block text-2xl serif italic">LA</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Local Ship</span></div>
-                    <div><span class="block text-2xl serif italic">Discrete</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Plain Box</span></div>
-                    <div><span class="block text-2xl serif italic">Global</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Est. 2011</span></div>
-                </div>
-            </div>
-            <div class="hidden md:block border border-white/10 p-10 bg-black/40 relative">
-                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-6 italic">Reliability Statement</p>
-                <p class="serif text-xl italic leading-relaxed text-gray-200">
-                    "Every asset is quality-tested in our industrial facility before being securely packaged in a double-walled, unbranded carton for your total privacy."
-                </p>
-            </div>
-        </div>
-    </section>
-
     <section id="collection" class="py-24 px-6 md:px-24 bg-white text-black">
         <div class="mb-16 flex flex-col md:flex-row justify-between items-end border-b border-black/10 pb-10">
             <div>
                 <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
-                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500 mt-2 italic">Exhibition Grade Stock</p>
             </div>
             <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0 italic">31 Masterpieces Available</p>
         </div>
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12"></div>
-    </section>
-
-    <section id="policy" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="serif text-4xl mb-16 italic text-center text-white underline decoration-white/10 underline-offset-8">Shipping & Terms</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Logistics</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">Price Notice:</span> Extra fees apply for islands/remote areas.</li>
-                        <li>• <span class="text-white italic">US Only:</span> We do NOT ship to AK, HI, PR, GU, or AP military bases.</li>
-                        <li>• <span class="text-white italic">No Returns (EU):</span> European warehouses do not accept returns.</li>
-                    </ul>
+        
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12">
+            <div class="group">
+                <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
+                    <img src="images/product-01.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+01'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
                 </div>
-                <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Refund Policy</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">Final Sale:</span> Private health products—No returns or exchanges.</li>
-                        <li>• <span class="text-white italic">Damages:</span> Refuse damaged boxes. Claims must be made within 7 days.</li>
-                        <li>• <span class="text-white italic">Materials:</span> Silicone items are strictly non-refundable.</li>
-                    </ul>
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <h3 class="serif text-lg md:text-xl italic font-bold">Luxe 01</h3>
+                        <p class="text-[8px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade • LA Stock</p>
+                    </div>
+                    <div class="pt-2">
+                        <p class="serif text-lg md:text-xl font-bold mb-4">$280</p>
+                        <div id="paypal-container-KJGFNAY5VBR8N"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="py-20 text-center bg-zinc-900/50 text-[9px] text-gray-600 tracking-[0.4em] uppercase">
-        &copy; 2026 LUXE DOLL INTERNATIONAL | Professional Artistry
+        &copy; 2026 LUXE DOLL INTERNATIONAL
     </footer>
-
-    <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-3">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Top" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white">↑</button>
-        <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" title="Terms" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white text-[9px] font-bold">TERMS</button>
-    </div>
 
     <script>
         const grid = document.getElementById('product-grid');
         
-        for (let i = 1; i <= 31; i++) {
+        // 渲染剩余的 30 个产品
+        for (let i = 2; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
-            let price = (i === 1) ? 280 : (1800 + (i * 25)); 
-            
+            let price = 1800 + (i * 25);
             grid.innerHTML += `
                 <div class="group">
                     <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                        <img src="images/product-${num}.jpg" 
-                             onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+Exhibition'"
-                             class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                        <img src="images/product-${num}.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+Exhibition'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
                     </div>
                     <div class="flex flex-col space-y-4">
                         <div>
@@ -145,19 +101,18 @@
                             <div id="paypal-container-${num}" class="min-h-[35px]"></div>
                         </div>
                     </div>
-                </div>
-            `;
+                </div>`;
         }
 
         function initPayPal() {
             if (!window.paypal) return;
 
-            // 修改 2：第 1 个产品精准绑定 HostedButtonId 且仅显示按钮
+            // 第 1 个产品：使用你截图中的专用 Hosted 渲染方式
             paypal.HostedButtons({
                 hostedButtonId: "KJGFNAY5VBR8N",
-            }).render("#paypal-container-01");
+            }).render("#paypal-container-KJGFNAY5VBR8N");
 
-            // 其余产品逻辑保持不变
+            // 其余产品
             for (let i = 2; i <= 31; i++) {
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
@@ -166,7 +121,7 @@
                     createOrder: (data, actions) => {
                         return actions.order.create({
                             purchase_units: [{
-                                description: `Luxe Model ${num} - Final Sale`,
+                                description: `Luxe Model ${num}`,
                                 amount: { value: price.toString() }
                             }]
                         });
@@ -180,7 +135,8 @@
             }
         }
 
-        window.onload = () => { setTimeout(initPayPal, 600); };
+        // 延迟 1 秒加载，确保页面容器和 PayPal SDK 都准备就绪
+        window.onload = () => { setTimeout(initPayPal, 1000); };
     </script>
 </body>
 </html>
