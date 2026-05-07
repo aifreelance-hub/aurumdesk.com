@@ -4,167 +4,360 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXE DOLL | Professional Hyper-Realistic Artistry</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <!-- PayPal Hosted Button SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAUEoAINS_-q3fOEaBBCBj0tkbRjlctYRcClEOsvbxzhuU_g0CEi9sBQcqfCYK_Me-exptsAZQhNuKuOo&components=hosted-buttons&disable-funding=venmo&currency=USD&locale=en_US"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .float-btn { transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .float-btn:hover { transform: translateY(-3px); background: white; color: black; }
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #333; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .float-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px);
+            background: white;
+            color: black;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- AGE GATE -->
     <div id="age-gate" class="fixed inset-0 z-[500] flex items-center justify-center bg-black">
         <div class="text-center px-6">
             <h2 class="serif text-4xl italic mb-6">Age Verification</h2>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase mb-8">You must be 18+ to enter this exhibition</p>
-            <button onclick="document.getElementById('age-gate').style.display='none'" class="border border-white px-12 py-3 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-widest">Enter Site</button>
+            <p class="text-[10px] tracking-widest text-gray-500 uppercase mb-8">
+                You must be 18+ to enter this exhibition
+            </p>
+
+            <button
+                onclick="document.getElementById('age-gate').style.display='none'"
+                class="border border-white px-12 py-3 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-widest">
+                Enter Site
+            </button>
         </div>
     </div>
 
+    <!-- NAV -->
     <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-10 py-6 md:py-8 bg-black/60 backdrop-blur-md border-b border-white/5">
-        <div class="text-xl md:text-2xl font-bold tracking-tighter serif uppercase">Luxe Doll</div>
+
+        <div class="text-xl md:text-2xl font-bold tracking-tighter serif uppercase">
+            Luxe Doll
+        </div>
+
         <div class="flex space-x-4 md:space-x-8 text-[8px] md:text-[9px] tracking-[0.2em] uppercase font-semibold">
             <a href="#factory" class="hover:text-gray-400">Heritage</a>
             <a href="#collection" class="hover:text-gray-400">Collection</a>
             <a href="#policy" class="hover:text-gray-400">Policy</a>
         </div>
+
     </nav>
 
+    <!-- HERO -->
     <section class="h-screen relative flex items-center justify-center overflow-hidden">
-        <img src="images/factory-6.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Exhibition Hall">
+
+        <img src="images/factory-6.jpg"
+             class="absolute inset-0 w-full h-full object-cover opacity-50"
+             alt="Exhibition Hall">
+
         <div class="absolute inset-0 bg-black/40"></div>
+
         <div class="relative z-10 text-center px-6">
-            <span class="text-[9px] tracking-[0.5em] uppercase text-gray-400 mb-4 block">Est. 2011 | Premium Assets</span>
-            <h1 class="serif text-5xl md:text-9xl italic mb-6">Silent Elegance.</h1>
-            <p class="tracking-[0.4em] uppercase text-[9px] md:text-[10px] text-gray-300">Los Angeles Warehouse • Medical Grade TPE • Discreet Delivery</p>
+
+            <span class="text-[9px] tracking-[0.5em] uppercase text-gray-400 mb-4 block">
+                Est. 2011 | Premium Assets
+            </span>
+
+            <h1 class="serif text-5xl md:text-9xl italic mb-6">
+                Silent Elegance.
+            </h1>
+
+            <p class="tracking-[0.4em] uppercase text-[9px] md:text-[10px] text-gray-300">
+                Los Angeles Warehouse • Medical Grade TPE • Discreet Delivery
+            </p>
+
         </div>
     </section>
 
+    <!-- FACTORY -->
     <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden">
+
         <div class="px-10 md:px-24 mb-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
             <div>
-                <h2 class="serif text-4xl md:text-5xl italic mb-8">15 Years of Craftsmanship</h2>
+
+                <h2 class="serif text-4xl md:text-5xl italic mb-8">
+                    15 Years of Craftsmanship
+                </h2>
+
                 <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
-                    <p>Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art **Los Angeles logistics facility** ensures fast, domestic transit within the US.</p>
-                    <p>We utilize high-purity TPE and medical-grade silicone to create a sensory experience that mirrors reality.</p>
+
+                    <p>
+                        Since 2011, Luxe Doll has been at the forefront of hyper-realistic design.
+                        Our state-of-the-art Los Angeles logistics facility ensures fast domestic transit.
+                    </p>
+
+                    <p>
+                        We utilize high-purity TPE and medical-grade silicone to create an ultra-realistic experience.
+                    </p>
+
                 </div>
+
             </div>
+
+            <div class="hidden md:block border border-white/10 p-10 bg-black/40 relative">
+
+                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-6 italic">
+                    Reliability Statement
+                </p>
+
+                <p class="serif text-xl italic leading-relaxed text-gray-200">
+                    "Every asset is quality-tested before secure delivery."
+                </p>
+
+            </div>
+
         </div>
+
     </section>
 
+    <!-- PRODUCTS -->
     <section id="collection" class="py-24 px-6 md:px-24 bg-white text-black">
+
         <div class="mb-16 flex flex-col md:flex-row justify-between items-end border-b border-black/10 pb-10">
+
             <div>
-                <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
-                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500 mt-2 italic">Exhibition Grade Stock</p>
+                <h2 class="serif text-4xl md:text-6xl italic">
+                    The Collection
+                </h2>
+
+                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500 mt-2 italic">
+                    Exhibition Grade Stock
+                </p>
             </div>
-            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0 italic">31 Masterpieces Available</p>
+
+            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0 italic">
+                31 Masterpieces Available
+            </p>
+
         </div>
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12"></div>
+
+        <div id="product-grid"
+             class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12">
+        </div>
+
     </section>
 
+    <!-- POLICY -->
     <section id="policy" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
+
         <div class="max-w-5xl mx-auto">
-            <h2 class="serif text-4xl mb-16 italic text-center text-white underline decoration-white/10 underline-offset-8">Shipping & Terms</h2>
+
+            <h2 class="serif text-4xl mb-16 italic text-center text-white">
+                Shipping & Terms
+            </h2>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+
                 <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Logistics</h3>
+
+                    <h3 class="serif text-xl mb-6 text-white">
+                        Logistics
+                    </h3>
+
                     <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">US Only:</span> We do NOT ship to AK, HI, PR, GU, or AP military bases.</li>
+                        <li>• Extra fees apply for remote areas.</li>
+                        <li>• US warehouse shipping only.</li>
+                        <li>• Discreet packaging guaranteed.</li>
                     </ul>
+
                 </div>
+
+                <div class="border border-white/5 p-8 bg-zinc-900/20">
+
+                    <h3 class="serif text-xl mb-6 text-white">
+                        Refund Policy
+                    </h3>
+
+                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
+                        <li>• Final Sale products.</li>
+                        <li>• Damage claims within 7 days.</li>
+                        <li>• Silicone items non-refundable.</li>
+                    </ul>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
+    <!-- FOOTER -->
     <footer class="py-20 text-center bg-zinc-900/50 text-[9px] text-gray-600 tracking-[0.4em] uppercase">
-        &copy; 2026 LUXE DOLL INTERNATIONAL | Professional Artistry
+        © 2026 LUXE DOLL INTERNATIONAL
     </footer>
 
+    <!-- FLOAT BUTTON -->
+    <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-3">
+
+        <button
+            onclick="window.scrollTo({top:0,behavior:'smooth'})"
+            class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white">
+            ↑
+        </button>
+
+    </div>
+
+    <!-- PRODUCTS SCRIPT -->
     <script>
+
         const grid = document.getElementById('product-grid');
-        
-        // 1. 生成产品结构
+
         for (let i = 1; i <= 31; i++) {
+
             let num = i < 10 ? '0' + i : i;
-            let price = (i === 1) ? 280 : (1800 + (i * 25)); 
-            
+            let price = (i === 1) ? 280 : (1800 + (i * 25));
+
             grid.innerHTML += `
                 <div class="group">
+
                     <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                        <img src="images/product-${num}.jpg" 
-                             onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+Exhibition'"
-                             class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+
+                        <img
+                            src="images/product-${num}.jpg"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+
                     </div>
+
                     <div class="flex flex-col space-y-4">
+
                         <div>
-                            <h3 class="serif text-lg md:text-xl italic font-bold">Luxe ${num}</h3>
-                            <p class="text-[8px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade • LA Stock</p>
+                            <h3 class="serif text-lg md:text-xl italic font-bold">
+                                Luxe ${num}
+                            </h3>
+
+                            <p class="text-[8px] md:text-[9px] tracking-widest uppercase text-gray-400">
+                                Exhibition Grade • LA Stock
+                            </p>
                         </div>
+
                         <div class="pt-2">
-                            <p class="serif text-lg md:text-xl font-bold mb-4">$${price}</p>
-                            <div id="paypal-container-${num}" style="min-height: 50px;"></div>
+
+                            <p class="serif text-lg md:text-xl font-bold mb-4">
+                                $${price}
+                            </p>
+
+                            ${
+                                i === 1
+                                ?
+                                `<div id="paypal-container-KJGFNAY5VBR8N"></div>`
+                                :
+                                `<div id="paypal-container-${num}" class="min-h-[35px]"></div>`
+                            }
+
                         </div>
+
                     </div>
+
                 </div>
             `;
         }
 
-        // 2. 初始化 PayPal 按钮函数
-        function initPayPalButtons() {
-            if (typeof paypal === 'undefined') {
-                console.error('PayPal SDK 未能正确加载');
-                return;
-            }
+        function initPayPal() {
 
-            // --- 第1个产品：使用托管按钮 ID (KJGFNAY5VBR8N) ---
-            if (paypal.HostedButtons) {
-                paypal.HostedButtons({
-                    hostedButtonId: "KJGFNAY5VBR8N",
-                }).render("#paypal-container-01")
-                .then(() => console.log("Luxe 01 按钮加载成功"))
-                .catch(err => console.error("Luxe 01 按钮加载失败:", err));
-            }
+            if (!window.paypal) return;
 
-            // --- 其他产品：普通按钮 ---
+            /* 第一个产品 Hosted Button */
+
+            paypal.HostedButtons({
+                hostedButtonId: "KJGFNAY5VBR8N",
+            }).render("#paypal-container-KJGFNAY5VBR8N");
+
+            /* 其它产品 */
+
             for (let i = 2; i <= 31; i++) {
+
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
-                
-                if (paypal.Buttons) {
-                    paypal.Buttons({
-                        style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
-                        createOrder: (data, actions) => {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    description: `Luxe Model ${num}`,
-                                    amount: { value: price.toString() }
-                                }]
-                            });
-                        },
-                        onApprove: (data, actions) => {
-                            return actions.order.capture().then(() => {
-                                window.location.href = "https://aurumdesks.com/thanks.html";
-                            });
-                        }
-                    }).render(`#paypal-container-${num}`);
-                }
+
+                paypal.Buttons({
+
+                    style: {
+                        layout: 'horizontal',
+                        color: 'black',
+                        shape: 'rect',
+                        label: 'pay',
+                        height: 35
+                    },
+
+                    createOrder: (data, actions) => {
+
+                        return actions.order.create({
+
+                            purchase_units: [{
+                                description: `Luxe Model ${num} - Final Sale`,
+                                amount: {
+                                    value: price.toString()
+                                }
+                            }]
+
+                        });
+
+                    },
+
+                    onApprove: (data, actions) => {
+
+                        return actions.order.capture().then(() => {
+
+                            window.location.href = "https://aurumdesks.com/thanks.html";
+
+                        });
+
+                    }
+
+                }).render(`#paypal-container-${num}`);
+
             }
+
         }
 
-        // 3. 关键：确保在 DOM 加载和 SDK 加载后执行
-        window.addEventListener('load', () => {
-            // 给 SDK 一点反应时间
-            setTimeout(initPayPalButtons, 1000);
-        });
+        window.onload = () => {
+
+            setTimeout(initPayPal, 600);
+
+        };
+
     </script>
+
 </body>
 </html>
