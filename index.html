@@ -13,7 +13,6 @@
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* 导航与浮动按钮样式 */
         .float-btn { transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .float-btn:hover { transform: translateY(-3px); background: white; color: black; }
         
@@ -92,7 +91,6 @@
     <section id="policy" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
         <div class="max-w-5xl mx-auto">
             <h2 class="serif text-4xl mb-16 italic text-center text-white underline decoration-white/10 underline-offset-8">Shipping & Terms</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
                 <div class="border border-white/5 p-8 bg-zinc-900/20">
                     <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Logistics</h3>
@@ -154,16 +152,15 @@
         function initPayPal() {
             if (!window.paypal) return;
 
-            // 1. 第一个产品：只显示 PayPal 官方按钮
+            // 修改 2：第 1 个产品精准绑定 HostedButtonId 且仅显示按钮
             paypal.HostedButtons({
                 hostedButtonId: "KJGFNAY5VBR8N",
             }).render("#paypal-container-01");
 
-            // 2. 加载其余产品的标准按钮
+            // 其余产品逻辑保持不变
             for (let i = 2; i <= 31; i++) {
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
-                
                 paypal.Buttons({
                     style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
                     createOrder: (data, actions) => {
@@ -183,9 +180,7 @@
             }
         }
 
-        window.onload = () => {
-            setTimeout(initPayPal, 600);
-        };
+        window.onload = () => { setTimeout(initPayPal, 600); };
     </script>
 </body>
 </html>
