@@ -12,10 +12,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@200;400;600&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
-        
         .float-btn { transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .float-btn:hover { transform: translateY(-3px); background: white; color: black; }
-        
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #333; }
@@ -55,24 +53,9 @@
             <div>
                 <h2 class="serif text-4xl md:text-5xl italic mb-8">15 Years of Craftsmanship</h2>
                 <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
-                    <p>
-                        Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art **Los Angeles logistics facility** ensures fast, domestic transit within the US, bypassing the delays of international shipping.
-                    </p>
-                    <p>
-                        We utilize high-purity TPE and medical-grade silicone to create a sensory experience that mirrors reality. With over 50,000 successful global deliveries, our expertise ensures your privacy and product quality are never compromised.
-                    </p>
+                    <p>Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art **Los Angeles logistics facility** ensures fast, domestic transit within the US.</p>
+                    <p>We utilize high-purity TPE and medical-grade silicone to create a sensory experience that mirrors reality.</p>
                 </div>
-                <div class="flex space-x-8 mt-10">
-                    <div><span class="block text-2xl serif italic">LA</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Local Ship</span></div>
-                    <div><span class="block text-2xl serif italic">Discrete</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Plain Box</span></div>
-                    <div><span class="block text-2xl serif italic">Global</span><span class="text-[8px] uppercase tracking-widest text-gray-500">Est. 2011</span></div>
-                </div>
-            </div>
-            <div class="hidden md:block border border-white/10 p-10 bg-black/40 relative">
-                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-6 italic">Reliability Statement</p>
-                <p class="serif text-xl italic leading-relaxed text-gray-200">
-                    "Every asset is quality-tested in our industrial facility before being securely packaged in a double-walled, unbranded carton for your total privacy."
-                </p>
             </div>
         </div>
     </section>
@@ -95,17 +78,7 @@
                 <div class="border border-white/5 p-8 bg-zinc-900/20">
                     <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Logistics</h3>
                     <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">Price Notice:</span> Extra fees apply for islands/remote areas.</li>
                         <li>• <span class="text-white italic">US Only:</span> We do NOT ship to AK, HI, PR, GU, or AP military bases.</li>
-                        <li>• <span class="text-white italic">No Returns (EU):</span> European warehouses do not accept returns.</li>
-                    </ul>
-                </div>
-                <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Refund Policy</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">Final Sale:</span> Private health products—No returns or exchanges.</li>
-                        <li>• <span class="text-white italic">Damages:</span> Refuse damaged boxes. Claims must be made within 7 days.</li>
-                        <li>• <span class="text-white italic">Materials:</span> Silicone items are strictly non-refundable.</li>
                     </ul>
                 </div>
             </div>
@@ -116,15 +89,10 @@
         &copy; 2026 LUXE DOLL INTERNATIONAL | Professional Artistry
     </footer>
 
-    <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-3">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Top" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white">↑</button>
-        <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" title="Terms" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white text-[9px] font-bold">TERMS</button>
-    </div>
-
     <script>
         const grid = document.getElementById('product-grid');
         
-        // 渲染产品网格
+        // 1. 生成产品结构
         for (let i = 1; i <= 31; i++) {
             let num = i < 10 ? '0' + i : i;
             let price = (i === 1) ? 280 : (1800 + (i * 25)); 
@@ -143,47 +111,60 @@
                         </div>
                         <div class="pt-2">
                             <p class="serif text-lg md:text-xl font-bold mb-4">$${price}</p>
-                            <div id="paypal-container-${num}" class="min-h-[35px]"></div>
+                            <div id="paypal-container-${num}" style="min-height: 50px;"></div>
                         </div>
                     </div>
                 </div>
             `;
         }
 
-        // 初始化 PayPal 收款
-        function initPayPal() {
-            if (!window.paypal) return;
+        // 2. 初始化 PayPal 按钮函数
+        function initPayPalButtons() {
+            if (typeof paypal === 'undefined') {
+                console.error('PayPal SDK 未能正确加载');
+                return;
+            }
 
-            // 第1个产品：使用截图中的 HostedButtonId 渲染专用付款按钮
-            paypal.HostedButtons({
-                hostedButtonId: "KJGFNAY5VBR8N",
-            }).render("#paypal-container-01");
+            // --- 第1个产品：使用托管按钮 ID (KJGFNAY5VBR8N) ---
+            if (paypal.HostedButtons) {
+                paypal.HostedButtons({
+                    hostedButtonId: "KJGFNAY5VBR8N",
+                }).render("#paypal-container-01")
+                .then(() => console.log("Luxe 01 按钮加载成功"))
+                .catch(err => console.error("Luxe 01 按钮加载失败:", err));
+            }
 
-            // 其余产品（Luxe 02 - Luxe 31）：使用通用渲染逻辑
+            // --- 其他产品：普通按钮 ---
             for (let i = 2; i <= 31; i++) {
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
-                paypal.Buttons({
-                    style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
-                    createOrder: (data, actions) => {
-                        return actions.order.create({
-                            purchase_units: [{
-                                description: `Luxe Model ${num} - Final Sale`,
-                                amount: { value: price.toString() }
-                            }]
-                        });
-                    },
-                    onApprove: (data, actions) => {
-                        return actions.order.capture().then(() => {
-                            window.location.href = "https://aurumdesks.com/thanks.html";
-                        });
-                    }
-                }).render(`#paypal-container-${num}`);
+                
+                if (paypal.Buttons) {
+                    paypal.Buttons({
+                        style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
+                        createOrder: (data, actions) => {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    description: `Luxe Model ${num}`,
+                                    amount: { value: price.toString() }
+                                }]
+                            });
+                        },
+                        onApprove: (data, actions) => {
+                            return actions.order.capture().then(() => {
+                                window.location.href = "https://aurumdesks.com/thanks.html";
+                            });
+                        }
+                    }).render(`#paypal-container-${num}`);
+                }
             }
         }
 
-        // 页面加载完成后延迟初始化，确保 SDK 加载完毕
-        window.onload = () => { setTimeout(initPayPal, 600); };
+        // 3. 关键：确保在 DOM 加载和 SDK 加载后执行
+        window.addEventListener('load', () => {
+            // 给 SDK 一点反应时间
+            setTimeout(initPayPalButtons, 1000);
+        });
     </script>
 </body>
 </html>
