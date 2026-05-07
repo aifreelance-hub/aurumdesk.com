@@ -48,62 +48,73 @@
         </div>
     </section>
 
-    <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden">
-        <div class="px-10 md:px-24 mb-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section id="factory" class="py-24 bg-zinc-900/30 overflow-hidden border-b border-white/5">
+        <div class="px-10 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="serif text-4xl md:text-5xl italic mb-8">15 Years of Craftsmanship</h2>
                 <div class="space-y-6 text-gray-400 text-sm leading-relaxed">
-                    <p>Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art **Los Angeles logistics facility** ensures fast, domestic transit within the US.</p>
+                    <p>Since 2011, Luxe Doll has been at the forefront of hyper-realistic design. Our state-of-the-art <b>Los Angeles logistics facility</b> ensures fast transit within the US.</p>
                 </div>
+            </div>
+            <div class="hidden md:block border border-white/10 p-10 bg-black/40">
+                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-6 italic">Reliability Statement</p>
+                <p class="serif text-xl italic leading-relaxed text-gray-200">"Every asset is quality-tested in our industrial facility before being securely packaged for total privacy."</p>
             </div>
         </div>
     </section>
 
     <section id="collection" class="py-24 px-6 md:px-24 bg-white text-black">
-        <div class="mb-16 flex flex-col md:flex-row justify-between items-end border-b border-black/10 pb-10">
-            <div>
-                <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
-            </div>
-            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 mt-4 md:mt-0 italic">31 Masterpieces Available</p>
+        <div class="mb-16 flex justify-between items-end border-b border-black/10 pb-10">
+            <h2 class="serif text-4xl md:text-6xl italic">The Collection</h2>
+            <p class="text-[9px] tracking-[0.3em] uppercase text-gray-400 italic">31 Masterpieces Available</p>
         </div>
         
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-12 md:gap-y-24 gap-x-4 md:gap-x-12">
+            
             <div class="group">
                 <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
                     <img src="images/product-01.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+01'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
                 </div>
-                <div class="flex flex-col space-y-4">
-                    <div>
-                        <h3 class="serif text-lg md:text-xl italic font-bold">Luxe 01</h3>
-                        <p class="text-[8px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade • LA Stock</p>
-                    </div>
-                    <div class="pt-2">
-                        <p class="serif text-lg md:text-xl font-bold mb-4">$280</p>
-                        <div id="paypal-container-KJGFNAY5VBR8N" style="min-height: 50px;"></div>
-                    </div>
-                </div>
+                <h3 class="serif text-lg md:text-xl font-bold">Luxe 01</h3>
+                <p class="serif text-lg font-bold mb-4">$280</p>
+                <div id="paypal-container-KJGFNAY5VBR8N" style="min-height: 40px;"></div>
             </div>
+
+            <script>
+                const collectionGrid = document.currentScript.parentElement;
+                for (let i = 2; i <= 31; i++) {
+                    let num = i < 10 ? '0' + i : i;
+                    let price = 1800 + (i * 25);
+                    collectionGrid.innerHTML += `
+                        <div class="group">
+                            <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
+                                <img src="images/product-${num}.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+${num}'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                            </div>
+                            <h3 class="serif text-lg md:text-xl font-bold">Luxe ${num}</h3>
+                            <p class="serif text-lg font-bold mb-4">$${price}</p>
+                            <div id="paypal-container-${num}" style="min-height: 40px;"></div>
+                        </div>`;
+                }
+            </script>
         </div>
     </section>
 
     <section id="policy" class="py-24 px-10 md:px-24 bg-black border-t border-white/5">
         <div class="max-w-5xl mx-auto">
             <h2 class="serif text-4xl mb-16 italic text-center text-white underline decoration-white/10 underline-offset-8">Shipping & Terms</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Logistics</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">Price Notice:</span> Extra fees apply for islands/remote areas.</li>
-                        <li>• <span class="text-white italic">US Only:</span> We do NOT ship to AK, HI, PR, GU, or AP military bases.</li>
-                        <li>• <span class="text-white italic">No Returns (EU):</span> European warehouses do not accept returns.</li>
+                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase">Logistics</h3>
+                    <ul class="text-[11px] text-gray-400 space-y-4 tracking-widest uppercase">
+                        <li>• US Only: We do NOT ship to AK, HI, PR, GU, or AP bases.</li>
+                        <li>• Discreet: All items shipped in unbranded cartons.</li>
                     </ul>
                 </div>
                 <div class="border border-white/5 p-8 bg-zinc-900/20">
-                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase tracking-tighter">Refund Policy</h3>
-                    <ul class="text-[11px] text-gray-400 space-y-4 uppercase tracking-widest leading-relaxed">
-                        <li>• <span class="text-white italic">Final Sale:</span> Private health products—No returns or exchanges.</li>
-                        <li>• <span class="text-white italic">Damages:</span> Refuse damaged boxes. Claims must be made within 7 days.</li>
-                        <li>• <span class="text-white italic">Materials:</span> Silicone items are strictly non-refundable.</li>
+                    <h3 class="serif text-xl mb-6 text-white border-b border-white/10 pb-2 uppercase">Refund Policy</h3>
+                    <ul class="text-[11px] text-gray-400 space-y-4 tracking-widest uppercase">
+                        <li>• Final Sale: Private health products—No returns.</li>
+                        <li>• Claims: Damage claims must be made within 7 days.</li>
                     </ul>
                 </div>
             </div>
@@ -115,85 +126,45 @@
     </footer>
 
     <div class="fixed bottom-8 right-8 z-[100] flex flex-col space-y-3">
-        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Top" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white">↑</button>
-        <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" title="Terms" class="float-btn w-12 h-12 bg-black/80 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white text-[9px] font-bold">TERMS</button>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="float-btn w-12 h-12 bg-black/80 border border-white/20 rounded-full flex items-center justify-center text-white">↑</button>
+        <button onclick="document.getElementById('policy').scrollIntoView({behavior: 'smooth'})" class="float-btn w-12 h-12 bg-black/80 border border-white/20 rounded-full flex items-center justify-center text-white text-[9px] font-bold">TERMS</button>
     </div>
 
     <script>
-        // 关键：将所有逻辑封装在 initPayPal 方法中
-        function initPayPal() {
-            if (!window.paypal) {
-                console.error('PayPal SDK 未加载');
-                return;
-            }
+        // 渲染所有按钮的逻辑
+        function renderAllButtons() {
+            if (!window.paypal) return;
 
-            // 1. 先生成 Luxe 02 - Luxe 31 的 HTML
-            const grid = document.getElementById('product-grid');
+            // 1. 渲染第一个产品 (KJGFNAY5VBR8N)
+            paypal.HostedButtons({
+                hostedButtonId: "KJGFNAY5VBR8N",
+            }).render("#paypal-container-KJGFNAY5VBR8N");
+
+            // 2. 渲染 Luxe 02 - 31
             for (let i = 2; i <= 31; i++) {
                 let num = i < 10 ? '0' + i : i;
                 let price = 1800 + (i * 25);
-                grid.innerHTML += `
-                    <div class="group">
-                        <div class="aspect-[3/4] overflow-hidden bg-zinc-100 mb-6">
-                            <img src="images/product-${num}.jpg" onerror="this.src='https://via.placeholder.com/300x400?text=Luxe+Exhibition'" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
-                        </div>
-                        <div class="flex flex-col space-y-4">
-                            <div>
-                                <h3 class="serif text-lg md:text-xl italic font-bold">Luxe ${num}</h3>
-                                <p class="text-[8px] md:text-[9px] tracking-widest uppercase text-gray-400">Exhibition Grade • LA Stock</p>
-                            </div>
-                            <div class="pt-2">
-                                <p class="serif text-lg md:text-xl font-bold mb-4">$${price}</p>
-                                <div id="paypal-container-${num}" style="min-height: 50px;"></div>
-                            </div>
-                        </div>
-                    </div>`;
-            }
-
-            // 2. 在 DOM 完全渲染后，再尝试渲染 PayPal 按钮
-
-            // Luxe 01 (Hosted Button)
-            try {
-                paypal.HostedButtons({
-                    hostedButtonId: "KJGFNAY5VBR8N", // 必须与截图代码一致
-                }).render("#paypal-container-KJGFNAY5VBR8N");
-                console.log("Luxe 01 按钮尝试渲染");
-            } catch (error) {
-                console.error("Luxe 01 按钮渲染失败:", error);
-            }
-
-            // 其余产品 (Standard Buttons)
-            for (let i = 2; i <= 31; i++) {
-                let num = i < 10 ? '0' + i : i;
-                let price = 1800 + (i * 25);
-                try {
-                    paypal.Buttons({
-                        style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
-                        createOrder: (data, actions) => {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    description: `Luxe Model ${num}`,
-                                    amount: { value: price.toString() }
-                                }]
-                            });
-                        },
-                        onApprove: (data, actions) => {
-                            return actions.order.capture().then(() => {
-                                window.location.href = "https://aurumdesks.com/thanks.html";
-                            });
-                        }
-                    }).render(`#paypal-container-${num}`);
-                } catch (error) {
-                    console.error(`Luxe ${num} 按钮渲染失败:`, error);
-                }
+                paypal.Buttons({
+                    style: { layout: 'horizontal', color: 'black', shape: 'rect', label: 'pay', height: 35 },
+                    createOrder: (data, actions) => {
+                        return actions.order.create({
+                            purchase_units: [{
+                                description: `Luxe ${num}`,
+                                amount: { value: price.toString() }
+                            }]
+                        });
+                    },
+                    onApprove: (data, actions) => {
+                        return actions.order.capture().then(() => {
+                            window.location.href = "https://aurumdesks.com/thanks.html";
+                        });
+                    }
+                }).render(`#paypal-container-${num}`);
             }
         }
 
-        // 3. 强制在页面所有内容加载完毕后执行 initPayPal，并加上 1 秒延迟
-        window.onload = function() {
-            console.log("页面已加载，等待 1 秒初始化 PayPal...");
-            setTimeout(initPayPal, 1000);
-        };
+        // 页面完全加载后 1 秒再渲染按钮，确保容器 100% 存在
+        window.addEventListener('load', () => setTimeout(renderAllButtons, 1000));
     </script>
 </body>
 </html>
