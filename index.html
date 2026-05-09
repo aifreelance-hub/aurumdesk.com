@@ -7,131 +7,134 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; margin: 0; overflow-x: hidden; }
-        
-        /* 动态背景容器 */
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle at center, #0a192f 0%, #050505 100%);
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .text-gradient {
-            background: linear-gradient(to right, #60a5fa, #3b82f6, #1d4ed8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        @keyframes cta-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; }
+        #bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at center, #0a192f 0%, #050505 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: #3b82f6; transform: translateY(-5px); }
+        .text-gradient { background: linear-gradient(to right, #60a5fa, #3b82f6, #1d4ed8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @keyframes cta-pulse { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); } 70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
         .cta-button { animation: cta-pulse 2s infinite; }
     </style>
 </head>
-<body class="text-white">
-
-    <!-- 动态粒子背景 -->
+<body>
     <canvas id="bg-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav class="absolute top-0 w-full flex justify-between items-center px-10 py-8 z-50">
-        <div class="text-2xl font-extrabold tracking-tighter italic">NEXURA<span class="text-blue-500">MEDIA</span></div>
-        <div class="hidden lg:flex space-x-10 text-xs uppercase tracking-[0.2em] font-semibold">
-            <a href="#" class="hover:text-blue-400 transition">Strategy</a>
-            <a href="#" class="hover:text-blue-400 transition">Case Studies</a>
-            <a href="#" class="hover:text-blue-400 transition">The Method</a>
+    <nav class="fixed top-0 w-full flex justify-between items-center px-10 py-6 z-50 glass-card border-none">
+        <div class="text-2xl font-extrabold tracking-tighter italic text-gradient">NEXURA MEDIA</div>
+        <div class="hidden lg:flex space-x-8 text-xs uppercase tracking-widest font-bold">
+            <a href="#cases" class="hover:text-blue-400">Cases</a>
+            <a href="#reviews" class="hover:text-blue-400">Reviews</a>
+            <a href="#compliance" class="hover:text-blue-400">Compliance</a>
         </div>
-        <button class="glass-card px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Partner With Us</button>
+        <a href="mailto:hello@aurumdesks.com" class="bg-blue-600 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">Contact Us</a>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-screen w-full flex flex-col justify-center items-center text-center px-6">
-        <div class="relative z-10 max-w-5xl">
-            <span class="inline-block px-4 py-1 mb-6 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold tracking-widest uppercase">Meta Ads Performance Specialist</span>
-            <h1 class="text-6xl md:text-8xl font-extrabold leading-[1.1] mb-8">
-                Mastering the <span class="text-gradient">Meta Algorithm</span> For Your Scale.
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                Engineering hyper-profitable Facebook & Instagram ecosystems. We transform data into 8-figure revenue streams.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="mailto:hello@aurumdesks.com" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-bold text-lg cta-button transition-all">Get a Free Audit</a>
-                <a href="#" class="glass-card px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition">View Results</a>
-            </div>
+    <header class="h-screen flex flex-col justify-center items-center text-center px-6">
+        <span class="px-4 py-1 mb-6 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold tracking-widest uppercase">Verified Meta Business Partner</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">Scale Your Revenue with <br><span class="text-gradient">Precision Meta Ads</span></h1>
+        <p class="text-gray-400 text-lg max-w-2xl mb-10 font-light">We engineer high-converting Facebook ecosystems for high-growth brands in the US market.</p>
+        <div class="flex gap-6">
+            <a href="#cases" class="bg-blue-600 px-10 py-4 rounded-xl font-bold text-lg cta-button">View Case Studies</a>
         </div>
     </header>
 
-    <!-- 底部版权说明（解决域名和品牌不一致） -->
-    <footer class="absolute bottom-10 w-full text-center text-xs text-gray-600">
-        © 2026 Nexura Media. A specialized subsidiary of Aurum Group.
+    <!-- Case Studies Section -->
+    <section id="cases" class="py-24 px-10 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center italic">Proven Success Stories</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="text-blue-500 font-bold mb-2">E-Commerce Brand</div>
+                <h3 class="text-2xl font-bold mb-4">$0 to $1.2M in 6 Months</h3>
+                <p class="text-gray-400 text-sm mb-6">Through creative testing and Advantage+ audience modeling, we achieved a sustained 4.5x ROAS.</p>
+                <div class="flex gap-4"><span class="text-xs bg-white/10 px-3 py-1 rounded">Scale</span> <span class="text-xs bg-white/10 px-3 py-1 rounded">Meta Ads</span></div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="text-blue-500 font-bold mb-2">SaaS Enterprise</div>
+                <h3 class="text-2xl font-bold mb-4">65% Reduction in CPA</h3>
+                <p class="text-gray-400 text-sm mb-6">Implementing Server-Side CAPI and precision retargeting funnels to capture high-intent leads.</p>
+                <div class="flex gap-4"><span class="text-xs bg-white/10 px-3 py-1 rounded">Optimization</span> <span class="text-xs bg-white/10 px-3 py-1 rounded">CAPI</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="py-24 bg-white/5">
+        <div class="max-w-7xl mx-auto px-10">
+            <h2 class="text-4xl font-bold mb-16 text-center italic">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl italic">
+                    "Nexura Media transformed our Meta strategy. Their data-driven approach is unmatched in the industry."
+                    <div class="mt-6 not-italic font-bold text-blue-400">- CEO, TechFlow Inc.</div>
+                </div>
+                <div class="glass-card p-8 rounded-2xl italic">
+                    "Professional, transparent, and results-oriented. The best Meta partner for US market expansion."
+                    <div class="mt-6 not-italic font-bold text-blue-400">- Marketing Director, ZenFit</div>
+                </div>
+                <div class="glass-card p-8 rounded-2xl italic">
+                    "Finally, an agency that understands ROI rather than just vanity metrics. Highly recommended."
+                    <div class="mt-6 not-italic font-bold text-blue-400">- Founder, Bloomly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Footer -->
+    <footer id="compliance" class="py-20 px-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 text-sm">
+            <div class="col-span-2">
+                <div class="text-xl font-bold mb-4 italic text-gradient">NEXURA MEDIA</div>
+                <p class="text-gray-500 max-w-sm mb-4">A premier Meta advertising agency specializing in high-velocity scaling and data attribution.</p>
+                <p class="text-gray-600 text-xs italic">Nexura Media is a specialized subsidiary of Aurum Group.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Compliance</h4>
+                <ul class="text-gray-500 space-y-4">
+                    <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Cookie Policy</a></li>
+                    <li><a href="#" class="hover:text-blue-400">GDPR / CCPA</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-widest text-xs">Contact</h4>
+                <p class="text-gray-500">hello@aurumdesks.com</p>
+                <p class="text-gray-500 mt-4">Silicon Valley | Remote Global</p>
+            </div>
+        </div>
+        <div class="mt-20 text-center text-gray-700 text-xs">© 2026 Nexura Media. All Rights Reserved.</div>
     </footer>
 
-    <!-- 动态背景脚本 (原生JS粒子流) -->
     <script>
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-
         function init() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
             particles = [];
-            for (let i = 0; i < 100; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    size: Math.random() * 2
-                });
+            for (let i = 0; i < 80; i++) {
+                particles.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, size: Math.random() * 1.5 });
             }
         }
-
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'rgba(59, 130, 246, 0.5)';
-            ctx.strokeStyle = 'rgba(59, 130, 246, 0.05)';
-
+            ctx.fillStyle = 'rgba(59, 130, 246, 0.3)';
+            ctx.strokeStyle = 'rgba(59, 130, 246, 0.03)';
             particles.forEach((p, i) => {
-                p.x += p.vx;
-                p.y += p.vy;
-
+                p.x += p.vx; p.y += p.vy;
                 if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fill();
-
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
                 for (let j = i + 1; j < particles.length; j++) {
-                    const p2 = particles[j];
-                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                    if (dist < 150) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.stroke();
-                    }
+                    const p2 = particles[j]; const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 180) { ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }
                 }
             });
             requestAnimationFrame(draw);
         }
-
         window.addEventListener('resize', init);
-        init();
-        draw();
+        init(); draw();
     </script>
 </body>
 </html>
