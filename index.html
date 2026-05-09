@@ -3,144 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexura Media | Scale Your Brand to 8-Figures</title>
+    <title>Nexura Media | Global Growth & Data Attribution</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; scroll-behavior: smooth; }
-        #bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; }
-        .glass-card:hover { border-color: #3b82f6; background: rgba(59, 130, 246, 0.03); }
-        .pricing-premium { background: linear-gradient(145deg, rgba(59, 130, 246, 0.1) 0%, rgba(2, 6, 23, 0) 100%); border: 1px solid #3b82f6; }
-        .text-gradient { background: linear-gradient(to right, #60a5fa, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #010409; color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        #canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #010409; }
+        .glass-card { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+        .glass-card:hover { border-color: #3b82f6; background: rgba(59, 130, 246, 0.05); transform: translateY(-10px) scale(1.02); }
+        .text-gradient { background: linear-gradient(135deg, #fff 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .border-gradient { border-image: linear-gradient(to right, #3b82f6, transparent) 1; }
+        .nav-link { font-size: 10px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.3s; }
+        .nav-link:hover { color: #3b82f6; }
     </style>
 </head>
 <body>
-    <canvas id="bg-canvas"></canvas>
+    <div id="canvas-container">
+        <canvas id="digital-mesh"></canvas>
+    </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full flex justify-between items-center px-10 py-6 z-50 glass-card border-none">
-        <div class="text-2xl font-black italic text-gradient tracking-tighter">NEXURA MEDIA</div>
-        <div class="hidden lg:flex space-x-8 text-[10px] uppercase tracking-widest font-bold">
-            <a href="#services" class="hover:text-blue-400 transition">Services</a>
-            <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
-            <a href="privacy.html" class="hover:text-blue-400 transition">Legal</a>
+    <nav class="fixed top-0 w-full flex justify-between items-center px-10 py-8 z-50">
+        <div class="text-2xl font-black italic tracking-tighter">NEXURA<span class="text-blue-500">.</span></div>
+        <div class="hidden lg:flex space-x-12">
+            <a href="#services" class="nav-link">Capabilities</a>
+            <a href="#case-study" class="nav-link">Deep Dive</a>
+            <a href="#pricing" class="nav-link">Invest</a>
         </div>
-        <a href="#pricing" class="bg-blue-600 px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-blue-700 transition">Get Started</a>
+        <a href="mailto:support@aurumdesks.com" class="bg-white text-black px-8 py-3 rounded-full text-[10px] font-black uppercase hover:bg-blue-600 hover:text-white transition-all">Audit My Ads</a>
     </nav>
 
     <!-- Hero -->
-    <header class="pt-40 pb-20 text-center px-6">
-        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">Elite Meta Ads <br><span class="text-gradient">Performance</span></h1>
-        <p class="text-gray-400 text-xl max-w-3xl mx-auto mb-12 font-light">We solve the iOS14 attribution gap and scale spend profitably. No retainers for sub-scale brands—we win when you win.</p>
+    <header class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div class="mb-6 px-4 py-1 border border-blue-500/30 rounded-full bg-blue-500/5 text-blue-400 text-[10px] font-bold tracking-[0.3em] uppercase">
+            Data-First Meta Engineering
+        </div>
+        <h1 class="text-7xl md:text-[10rem] font-black leading-[0.85] mb-8 tracking-tighter">
+            SCALING <br><span class="text-gradient">BEYOND.</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed">
+            Stop guessing. We use server-side signal recovery and dynamic creative testing to force the Meta algorithm to work for you.
+        </p>
+        <a href="#pricing" class="bg-blue-600 text-white px-16 py-6 rounded-2xl font-bold text-xl hover:shadow-[0_0_50px_rgba(59,130,246,0.4)] transition-all">View Our Plans</a>
     </header>
 
-    <!-- Services Deep Dive -->
-    <section id="services" class="py-24 px-10 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-16 italic">Core Infrastructure_</h2>
-        <div class="grid md:grid-cols-3 gap-8 text-sm">
-            <div class="glass-card p-10 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4 text-blue-400">Server-Side Tracking</h3>
-                <p class="text-gray-500 leading-relaxed">Full Meta CAPI (Conversions API) integration via Google Tag Manager Server-Side. We recover up to 30% of "lost" conversion data from Safari and ad-blockers.</p>
+    <!-- Deep Case Study -->
+    <section id="case-study" class="py-32 px-10 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-black mb-8 italic">THE 8-FIGURE <br>BLUEPRINT_</h2>
+                <p class="text-gray-400 mb-8 leading-relaxed">对于我们代理的一家北美办公家具品牌，我们不仅仅是调整了广告语，我们重构了整个数据底层。</p>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-500 font-bold italic">01</div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-1">Signal Recovery</h4>
+                            <p class="text-gray-500 text-sm">通过 CAPI 找回了 Safari 浏览器 24% 的丢失订单。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center text-blue-500 font-bold italic">02</div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-1">Creative DCT</h4>
+                            <p class="text-gray-500 text-sm">每周测试 50+ 组创意，将单次获客成本（CPA）从 $45 降至 $18。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card p-10 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4 text-blue-400">DCT Creative Lab</h3>
-                <p class="text-gray-500 leading-relaxed">Dynamic Creative Testing for Hooks, Visuals, and Body Copy. We find your winning "Winning Cell" before scaling spend, minimizing waste.</p>
-            </div>
-            <div class="glass-card p-10 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4 text-blue-400">Omni-Channel Sync</h3>
-                <p class="text-gray-500 leading-relaxed">We don't just run Meta. We sync your Facebook audience data with Google Search and Email lists to create a closed-loop marketing ecosystem.</p>
+            <div class="glass-card p-12 rounded-[3rem] border-l-4 border-l-blue-600">
+                <div class="text-sm font-bold text-blue-500 mb-4 uppercase tracking-[0.3em]">Live Performance Data</div>
+                <div class="text-6xl font-black mb-2">$142,390.00</div>
+                <div class="text-gray-500 text-xs uppercase mb-8">Generated Revenue (Last 30 Days)</div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="text-2xl font-bold italic">4.21x</div>
+                        <div class="text-[10px] text-gray-600 font-bold uppercase tracking-widest">Global ROAS</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold italic">$0.82</div>
+                        <div class="text-[10px] text-gray-600 font-bold uppercase tracking-widest">Avg. CPC</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 bg-white/5 px-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl font-bold mb-4 italic tracking-tight">Investment Structure</h2>
-                <p class="text-gray-500">Transparent pricing. Scalable growth.</p>
+    <!-- Pricing (Action Oriented) -->
+    <section id="pricing" class="py-32 bg-white/5 px-10">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <h2 class="text-4xl font-black italic mb-4">CHOOSE YOUR VELOCITY_</h2>
+            <p class="text-gray-500">No hidden fees. Just performance.</p>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <!-- Basic Plan -->
+            <div class="glass-card p-12 rounded-3xl">
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-500 mb-6">Standard</h4>
+                <div class="text-5xl font-black mb-8">$1,997<span class="text-sm text-gray-600 uppercase">/mo</span></div>
+                <ul class="text-left text-xs space-y-4 mb-12 text-gray-400 font-bold uppercase tracking-widest leading-loose">
+                    <li>✓ Meta Ads Mgmt</li>
+                    <li>✓ Basic CAPI Setup</li>
+                    <li>✓ Weekly Audits</li>
+                </ul>
+                <button onclick="window.location.href='mailto:support@aurumdesks.com?subject=Standard Plan Subscription'" class="w-full py-4 border border-white/10 rounded-xl hover:bg-white hover:text-black transition-all font-bold">SELECT PLAN</button>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Tier 1 -->
-                <div class="glass-card p-10 rounded-3xl flex flex-col">
-                    <h4 class="text-xs uppercase tracking-widest font-bold mb-2">Growth Tier</h4>
-                    <div class="text-4xl font-black mb-6">$1,500<span class="text-sm font-normal text-gray-500"> /mo</span></div>
-                    <ul class="text-sm text-gray-400 space-y-4 mb-10 flex-grow">
-                        <li>• Ad Spend up to $10k/mo</li>
-                        <li>• Full Meta CAPI Setup</li>
-                        <li>• Weekly Optimization</li>
-                        <li>• Bi-Weekly Performance Calls</li>
-                    </ul>
-                    <a href="mailto:support@aurumdesks.com?subject=Growth Tier Inquiry" class="block text-center py-4 rounded-xl border border-blue-600 text-blue-400 font-bold hover:bg-blue-600 hover:text-white transition">Select Plan</a>
-                </div>
-                <!-- Tier 2 - POPULAR -->
-                <div class="glass-card pricing-premium p-10 rounded-3xl flex flex-col relative transform scale-105">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase">Most Popular</div>
-                    <h4 class="text-xs uppercase tracking-widest font-bold mb-2 text-blue-400">Scale Tier</h4>
-                    <div class="text-4xl font-black mb-6">$3,000<span class="text-sm font-normal text-gray-500"> /mo</span></div>
-                    <ul class="text-sm text-gray-400 space-y-4 mb-10 flex-grow">
-                        <li>• Ad Spend $10k - $50k/mo</li>
-                        <li>• Creative Strategy Lab</li>
-                        <li>• Landing Page Optimization</li>
-                        <li>• Real-Time Data Dashboard</li>
-                    </ul>
-                    <button onclick="window.location.href='mailto:support@aurumdesks.com'" class="w-full bg-blue-600 py-4 rounded-xl font-bold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition">Get Started Now</button>
-                </div>
-                <!-- Tier 3 -->
-                <div class="glass-card p-10 rounded-3xl flex flex-col">
-                    <h4 class="text-xs uppercase tracking-widest font-bold mb-2">Elite Tier</h4>
-                    <div class="text-4xl font-black mb-6">Custom<span class="text-sm font-normal text-gray-500"></span></div>
-                    <ul class="text-sm text-gray-400 space-y-4 mb-10 flex-grow">
-                        <li>• Ad Spend $50k+/mo</li>
-                        <li>• 10% of Ad Spend Management</li>
-                        <li>• Dedicated Account Director</li>
-                        <li>• Full Creative Production</li>
-                    </ul>
-                    <a href="mailto:support@aurumdesks.com" class="block text-center py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/10 transition">Contact For Quote</a>
-                </div>
+            <!-- Pro Plan -->
+            <div class="glass-card p-12 rounded-3xl border-2 border-blue-600 transform scale-110 relative bg-blue-600/5">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-widest">Recommended</div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-blue-400 mb-6">Scale Pro</h4>
+                <div class="text-5xl font-black mb-8">$3,497<span class="text-sm text-gray-600 uppercase">/mo</span></div>
+                <ul class="text-left text-xs space-y-4 mb-12 text-gray-300 font-bold uppercase tracking-widest leading-loose">
+                    <li>✓ Everything in Standard</li>
+                    <li>✓ Creative Strategy Lab</li>
+                    <li>✓ Landing Page CRO</li>
+                    <li>✓ Dedicated Slack Channel</li>
+                </ul>
+                <button onclick="window.location.href='mailto:support@aurumdesks.com?subject=Pro Plan Subscription'" class="w-full py-4 bg-blue-600 rounded-xl shadow-2xl shadow-blue-600/40 font-bold hover:bg-blue-700 transition-all uppercase tracking-widest">Buy Now</button>
+            </div>
+            <!-- Custom -->
+            <div class="glass-card p-12 rounded-3xl">
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-500 mb-6">Enterprise</h4>
+                <div class="text-5xl font-black mb-8">CUSTOM</div>
+                <ul class="text-left text-xs space-y-4 mb-12 text-gray-400 font-bold uppercase tracking-widest leading-loose">
+                    <li>✓ Full Creative Production</li>
+                    <li>✓ Omni-channel Scaling</li>
+                    <li>✓ Percentage of Spend</li>
+                </ul>
+                <button onclick="window.location.href='mailto:support@aurumdesks.com?subject=Enterprise Inquiry'" class="w-full py-4 border border-white/10 rounded-xl hover:bg-white hover:text-black transition-all font-bold">CONTACT US</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 px-10 border-t border-white/5 text-gray-600 text-[10px] uppercase tracking-widest flex justify-between items-center">
-        <div>© 2026 Nexura Media | support@aurumdesks.com</div>
-        <div class="flex space-x-6">
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
+    <footer class="py-20 px-10 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 font-bold uppercase tracking-widest">
+            <div>© 2026 Nexura Media | A Subsidiary of Aurum Group</div>
+            <div class="flex space-x-8 mt-6 md:mt-0">
+                <a href="privacy.html" class="hover:text-blue-500">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-blue-500">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <!-- 黑科技脉冲网格脚本 -->
     <script>
-        const canvas = document.getElementById('bg-canvas');
+        const canvas = document.getElementById('digital-mesh');
         const ctx = canvas.getContext('2d');
-        let particles = [];
+        let width, height;
+        let points = [];
+        const spacing = 45; // 网格密度
+
         function init() {
-            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-            particles = [];
-            for (let i = 0; i < 80; i++) {
-                particles.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4, size: Math.random() * 1.5 });
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            points = [];
+            for (let y = 0; y < height + spacing; y += spacing) {
+                for (let x = 0; x < width + spacing; x += spacing) {
+                    points.push({ x, y, baseX: x, baseY: y, wave: Math.random() * 100 });
+                }
             }
         }
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'rgba(59, 130, 246, 0.2)';
-            ctx.strokeStyle = 'rgba(59, 130, 246, 0.03)';
-            particles.forEach((p, i) => {
-                p.x += p.vx; p.y += p.vy;
-                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
-                for (let j = i + 1; j < particles.length; j++) {
-                    const p2 = particles[j]; const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                    if (dist < 180) { ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }
+
+        let time = 0;
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            time += 0.005;
+
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(59, 130, 246, 0.08)';
+            ctx.lineWidth = 1;
+
+            for (let i = 0; i < points.length; i++) {
+                const p = points[i];
+                // 模拟正弦波起伏
+                p.y = p.baseY + Math.sin(time + p.wave) * 15;
+                p.x = p.baseX + Math.cos(time + p.wave) * 15;
+
+                // 绘制网格连线 (只连接右边和下边的点)
+                const nextX = points[i + 1];
+                if (nextX && nextX.baseX > p.baseX) {
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(nextX.x, nextX.y);
+                }
+            }
+            ctx.stroke();
+
+            // 绘制脉冲光点
+            points.forEach((p, i) => {
+                if (i % 7 === 0) { // 只给部分点加光点，避免太乱
+                    const alpha = (Math.sin(time * 2 + p.wave) + 1) / 2;
+                    ctx.fillStyle = `rgba(59, 130, 246, ${alpha * 0.2})`;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+                    ctx.fill();
                 }
             });
-            requestAnimationFrame(draw);
+
+            requestAnimationFrame(animate);
         }
+
         window.addEventListener('resize', init);
-        init(); draw();
+        init();
+        animate();
     </script>
 </body>
 </html>
