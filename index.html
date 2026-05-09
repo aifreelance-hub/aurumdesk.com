@@ -3,224 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexura Media | Elite Meta Ads Growth Agency</title>
+    <title>Nexura Media | Scale Your Brand to 8-Figures</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; color: white; scroll-behavior: smooth; overflow-x: hidden; }
-        #bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #030712; }
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .glass-card:hover { border-color: #3b82f6; transform: translateY(-8px); background: rgba(59, 130, 246, 0.05); }
-        .text-gradient { background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .cta-button { position: relative; overflow: hidden; transition: all 0.3s; box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-        .cta-button:hover { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); transform: scale(1.05); }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
-        .floating { animation: float 4s ease-in-out infinite; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; scroll-behavior: smooth; }
+        #bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; }
+        .glass-card:hover { border-color: #3b82f6; background: rgba(59, 130, 246, 0.03); }
+        .pricing-premium { background: linear-gradient(145deg, rgba(59, 130, 246, 0.1) 0%, rgba(2, 6, 23, 0) 100%); border: 1px solid #3b82f6; }
+        .text-gradient { background: linear-gradient(to right, #60a5fa, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body>
     <canvas id="bg-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 z-50">
-        <div class="text-2xl font-black tracking-tighter italic text-gradient">NEXURA MEDIA</div>
-        <div class="hidden lg:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-bold">
-            <a href="#cases" class="hover:text-blue-400 transition">Case Studies</a>
-            <a href="#method" class="hover:text-blue-400 transition">The Method</a>
-            <a href="privacy.html" class="hover:text-blue-400 transition">Compliance</a>
+    <nav class="fixed top-0 w-full flex justify-between items-center px-10 py-6 z-50 glass-card border-none">
+        <div class="text-2xl font-black italic text-gradient tracking-tighter">NEXURA MEDIA</div>
+        <div class="hidden lg:flex space-x-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="#services" class="hover:text-blue-400 transition">Services</a>
+            <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+            <a href="privacy.html" class="hover:text-blue-400 transition">Legal</a>
         </div>
-        <a href="mailto:support@aurumdesks.com" class="glass-card px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-600 transition">Contact</a>
+        <a href="#pricing" class="bg-blue-600 px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-blue-700 transition">Get Started</a>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="h-screen flex flex-col justify-center items-center text-center px-6">
-        <div class="floating mb-8">
-            <span class="px-5 py-2 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-black tracking-[0.2em] uppercase">
-                Next-Gen Advertising Intelligence
-            </span>
-        </div>
-        <h1 class="text-6xl md:text-9xl font-black leading-[0.9] mb-8 tracking-tighter">
-            WE SCALE <br><span class="text-gradient">FASTER.</span>
-        </h1>
-        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed">
-            Eliminating guesswork with Server-Side CAPI tracking and algorithmic creative testing. Your growth, scientifically engineered.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-6">
-            <a href="mailto:support@aurumdesks.com" class="bg-blue-600 text-white px-12 py-5 rounded-2xl font-bold text-lg cta-button">
-                Start My Free Audit
-            </a>
-        </div>
+    <!-- Hero -->
+    <header class="pt-40 pb-20 text-center px-6">
+        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight">Elite Meta Ads <br><span class="text-gradient">Performance</span></h1>
+        <p class="text-gray-400 text-xl max-w-3xl mx-auto mb-12 font-light">We solve the iOS14 attribution gap and scale spend profitably. No retainers for sub-scale brands—we win when you win.</p>
     </header>
 
-    <!-- Statistics Section -->
-    <section class="py-20 px-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="text-center">
-                <div class="text-4xl font-black text-white mb-2">$50M+</div>
-                <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Managed Spend</div>
+    <!-- Services Deep Dive -->
+    <section id="services" class="py-24 px-10 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 italic">Core Infrastructure_</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-sm">
+            <div class="glass-card p-10 rounded-3xl">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">Server-Side Tracking</h3>
+                <p class="text-gray-500 leading-relaxed">Full Meta CAPI (Conversions API) integration via Google Tag Manager Server-Side. We recover up to 30% of "lost" conversion data from Safari and ad-blockers.</p>
             </div>
-            <div class="text-center">
-                <div class="text-4xl font-black text-white mb-2">4.8x</div>
-                <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Avg. ROAS</div>
+            <div class="glass-card p-10 rounded-3xl">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">DCT Creative Lab</h3>
+                <p class="text-gray-500 leading-relaxed">Dynamic Creative Testing for Hooks, Visuals, and Body Copy. We find your winning "Winning Cell" before scaling spend, minimizing waste.</p>
             </div>
-            <div class="text-center">
-                <div class="text-4xl font-black text-white mb-2">120+</div>
-                <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Brands Scaled</div>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl font-black text-white mb-2">24/7</div>
-                <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Optimization</div>
+            <div class="glass-card p-10 rounded-3xl">
+                <h3 class="text-xl font-bold mb-4 text-blue-400">Omni-Channel Sync</h3>
+                <p class="text-gray-500 leading-relaxed">We don't just run Meta. We sync your Facebook audience data with Google Search and Email lists to create a closed-loop marketing ecosystem.</p>
             </div>
         </div>
     </section>
 
-    <!-- Simple Case Grid -->
-    <section id="cases" class="py-32 px-10 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-black mb-16 italic tracking-tight">SELECTED IMPACT_</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass-card p-10 rounded-3xl">
-                <span class="text-blue-500 font-bold text-xs uppercase tracking-widest">E-commerce</span>
-                <h3 class="text-3xl font-bold mt-4 mb-4">$0 → $1.2M Revenue</h3>
-                <p class="text-gray-400 font-light mb-8 text-sm">Aggressive scaling for a US-based fashion brand utilizing AI-driven creative iterations.</p>
-                <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div class="h-full bg-blue-600 w-[85%]"></div>
-                </div>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-white/5 px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4 italic tracking-tight">Investment Structure</h2>
+                <p class="text-gray-500">Transparent pricing. Scalable growth.</p>
             </div>
-            <div class="glass-card p-10 rounded-3xl">
-                <span class="text-blue-500 font-bold text-xs uppercase tracking-widest">SaaS / B2B</span>
-                <h3 class="text-3xl font-bold mt-4 mb-4">-65% Lead CPA</h3>
-                <p class="text-gray-400 font-light mb-8 text-sm">Implementation of Server-Side GTM and Meta CAPI to recover 30% of lost attribution data.</p>
-                <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div class="h-full bg-blue-600 w-[92%]"></div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tier 1 -->
+                <div class="glass-card p-10 rounded-3xl flex flex-col">
+                    <h4 class="text-xs uppercase tracking-widest font-bold mb-2">Growth Tier</h4>
+                    <div class="text-4xl font-black mb-6">$1,500<span class="text-sm font-normal text-gray-500"> /mo</span></div>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-10 flex-grow">
+                        <li>• Ad Spend up to $10k/mo</li>
+                        <li>• Full Meta CAPI Setup</li>
+                        <li>• Weekly Optimization</li>
+                        <li>• Bi-Weekly Performance Calls</li>
+                    </ul>
+                    <a href="mailto:support@aurumdesks.com?subject=Growth Tier Inquiry" class="block text-center py-4 rounded-xl border border-blue-600 text-blue-400 font-bold hover:bg-blue-600 hover:text-white transition">Select Plan</a>
+                </div>
+                <!-- Tier 2 - POPULAR -->
+                <div class="glass-card pricing-premium p-10 rounded-3xl flex flex-col relative transform scale-105">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase">Most Popular</div>
+                    <h4 class="text-xs uppercase tracking-widest font-bold mb-2 text-blue-400">Scale Tier</h4>
+                    <div class="text-4xl font-black mb-6">$3,000<span class="text-sm font-normal text-gray-500"> /mo</span></div>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-10 flex-grow">
+                        <li>• Ad Spend $10k - $50k/mo</li>
+                        <li>• Creative Strategy Lab</li>
+                        <li>• Landing Page Optimization</li>
+                        <li>• Real-Time Data Dashboard</li>
+                    </ul>
+                    <button onclick="window.location.href='mailto:support@aurumdesks.com'" class="w-full bg-blue-600 py-4 rounded-xl font-bold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 transition">Get Started Now</button>
+                </div>
+                <!-- Tier 3 -->
+                <div class="glass-card p-10 rounded-3xl flex flex-col">
+                    <h4 class="text-xs uppercase tracking-widest font-bold mb-2">Elite Tier</h4>
+                    <div class="text-4xl font-black mb-6">Custom<span class="text-sm font-normal text-gray-500"></span></div>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-10 flex-grow">
+                        <li>• Ad Spend $50k+/mo</li>
+                        <li>• 10% of Ad Spend Management</li>
+                        <li>• Dedicated Account Director</li>
+                        <li>• Full Creative Production</li>
+                    </ul>
+                    <a href="mailto:support@aurumdesks.com" class="block text-center py-4 rounded-xl border border-white/20 text-white font-bold hover:bg-white/10 transition">Contact For Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 px-10 border-t border-white/5 bg-black/50">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-            <div>
-                <div class="text-2xl font-black italic text-gradient mb-4">NEXURA MEDIA</div>
-                <p class="text-gray-500 text-xs tracking-widest uppercase">Elite Meta Performance Agency</p>
-                <p class="text-gray-600 text-[10px] mt-8 italic">A specialized unit of Aurum Group.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-16">
-                <div>
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-6">Network</h4>
-                    <ul class="text-gray-500 text-xs space-y-3">
-                        <li><a href="privacy.html" class="hover:text-blue-400">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-blue-400">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-6">Contact</h4>
-                    <p class="text-gray-500 text-xs">support@aurumdesks.com</p>
-                    <p class="text-gray-600 text-xs mt-2">Silicon Valley | London</p>
-                </div>
-            </div>
+    <footer class="py-20 px-10 border-t border-white/5 text-gray-600 text-[10px] uppercase tracking-widest flex justify-between items-center">
+        <div>© 2026 Nexura Media | support@aurumdesks.com</div>
+        <div class="flex space-x-6">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
         </div>
     </footer>
 
-    <!-- 增强版科技动态背景脚本 -->
     <script>
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        let mouse = { x: null, y: null, radius: 150 };
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
-
-        class Particle {
-            constructor(layer) {
-                this.layer = layer; // 1: 远, 2: 中, 3: 近
-                this.init();
-            }
-            init() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                // 远景慢且小，近景快且大
-                this.size = this.layer * 0.8;
-                this.speedX = (Math.random() - 0.5) * (this.layer * 0.3);
-                this.speedY = (Math.random() - 0.5) * (this.layer * 0.3);
-                this.baseX = this.x;
-                this.baseY = this.y;
-                this.density = (Math.random() * 30) + 1;
-            }
-            update() {
-                // 基础移动
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                // 边界回弹
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-
-                // 鼠标交互
-                let dx = mouse.x - this.x;
-                let dy = mouse.y - this.y;
-                let distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < mouse.radius) {
-                    let forceDirectionX = dx / distance;
-                    let forceDirectionY = dy / distance;
-                    let force = (mouse.radius - distance) / mouse.radius;
-                    let directionX = forceDirectionX * force * this.density;
-                    let directionY = forceDirectionY * force * this.density;
-                    this.x -= directionX;
-                    this.y -= directionY;
-                }
-            }
-            draw() {
-                ctx.fillStyle = `rgba(59, 130, 246, ${this.layer * 0.15})`;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.closePath();
-                ctx.fill();
-            }
-        }
-
-        function setup() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        function init() {
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
             particles = [];
-            // 创建三层粒子
-            for (let i = 0; i < 40; i++) particles.push(new Particle(1));
-            for (let i = 0; i < 30; i++) particles.push(new Particle(2));
-            for (let i = 0; i < 20; i++) particles.push(new Particle(3));
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // 绘制连线
-            for (let a = 0; a < particles.length; a++) {
-                for (let b = a; b < particles.length; b++) {
-                    let dx = particles[a].x - particles[b].x;
-                    let dy = particles[a].y - particles[b].y;
-                    let distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 150) {
-                        let opacity = 1 - (distance / 150);
-                        ctx.strokeStyle = `rgba(59, 130, 246, ${opacity * 0.15})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[a].x, particles[a].y);
-                        ctx.lineTo(particles[b].x, particles[b].y);
-                        ctx.stroke();
-                    }
-                }
+            for (let i = 0; i < 80; i++) {
+                particles.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4, size: Math.random() * 1.5 });
             }
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            requestAnimationFrame(animate);
         }
-
-        window.addEventListener('resize', setup);
-        setup();
-        animate();
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(59, 130, 246, 0.2)';
+            ctx.strokeStyle = 'rgba(59, 130, 246, 0.03)';
+            particles.forEach((p, i) => {
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j]; const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 180) { ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }
+                }
+            });
+            requestAnimationFrame(draw);
+        }
+        window.addEventListener('resize', init);
+        init(); draw();
     </script>
 </body>
 </html>
