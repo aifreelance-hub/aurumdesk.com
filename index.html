@@ -540,8 +540,8 @@
         <p>Contact us on WhatsApp</p>
     </div>
 
-    <!-- WhatsApp Official Style Button -->
-    <a href="https://wa.me/15154030534" target="_blank"
+    <!-- Random WhatsApp Button -->
+    <a href="#" onclick="openRandomWhatsApp()" 
        class="float-btn bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center border-2 border-black">
 
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -549,6 +549,18 @@
              class="w-9 h-9">
     </a>
 </div>
+
+<script>
+function openRandomWhatsApp() {
+    const numbers = [
+        "15154030534",
+        "18034749673"
+    ];
+
+    const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+    window.open(`https://wa.me/${randomNumber}`, '_blank');
+}
+</script>
 
 </body>
 </html>
